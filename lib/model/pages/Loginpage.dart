@@ -30,10 +30,10 @@ class _LoginPageState extends State<LoginPage> {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(top: 90.0),
+              padding: const EdgeInsets.only(top: 50.0),
               child: Stack(children: <Widget>[
                 Padding(
-                  padding: const EdgeInsets.only(bottom: 100.0),
+                  padding: const EdgeInsets.only(bottom: 200.0),
                   child: Center(
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -59,21 +59,21 @@ class _LoginPageState extends State<LoginPage> {
                     children: <Widget>[
                       Image.asset(
                         "images/img_5.png",
-                        width: 140,
-                        height: 124,
+                        width: 160,
+                        height: 170,
                       ),
                     ],
                   ),
                 ),
                 // ),
                 Padding(
-                  padding: const EdgeInsets.fromLTRB(12, 50, 0, 0),
+                  padding: const EdgeInsets.fromLTRB(8,70,8,0),
                   child: Container(
                     // alignment: Alignment.topCenter,
 
                     //  color: Colors.white,
                     height: 410,
-                    width: 370,
+                    width: MediaQuery.of(context).size.width,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
                         color: Colors.white),

@@ -31,10 +31,10 @@ class _SignUP2State extends State<SignUP2> {
             ),
             const SizedBox(height: 70),
             Padding(
-              padding: const EdgeInsets.only(top: 90.0),
+              padding: const EdgeInsets.only(top: 50.0),
               child: Stack(children: <Widget>[
                 Padding(
-                  padding: const EdgeInsets.only(bottom: 100.0),
+                  padding: const EdgeInsets.only(bottom: 200.0),
                   child: Center(
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -43,7 +43,7 @@ class _SignUP2State extends State<SignUP2> {
                           width: MediaQuery.of(context).size.width,
                           alignment: Alignment.topCenter,
                           child: Image.asset(
-                            "images/img_4.png",
+                            "images/img_7.png",
                             width: screenSize.width,
                             height: 108,
                           ),
@@ -59,9 +59,9 @@ class _SignUP2State extends State<SignUP2> {
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: <Widget>[
                       Image.asset(
-                        "images/img_5.png",
-                        width: 140,
-                        height: 124,
+                        "images/img_6.png",
+                        width: 170,
+                        height: 160,
                       ),
                     ],
                   ),
@@ -69,7 +69,7 @@ class _SignUP2State extends State<SignUP2> {
                 // ),
 
                 Padding(
-                  padding: const EdgeInsets.all(8),
+                  padding: const EdgeInsets.fromLTRB(8,70,8,0),
                   child: Container(
                     // alignment: Alignment.topCenter,
                     //  color: Colors.white,
