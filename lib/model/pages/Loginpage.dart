@@ -42,7 +42,7 @@ class _LoginPageState extends State<LoginPage> {
                           width: MediaQuery.of(context).size.width,
                           alignment: Alignment.topCenter,
                           child: Image.asset(
-                            "images/img.png",
+                            "images/img_4.png",
                             width: screenSize.width,
                             height: 108,
                           ),
@@ -51,21 +51,21 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                   ),
                 ),
-                SizedBox(
+                Container(
                   width: screenSize.width,
-                  //alignment: Alignment.topRight,
+                  alignment: Alignment.topRight,
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: <Widget>[
                       Image.asset(
-                        "images/img_3.png",
+                        "images/img_5.png",
                         width: 140,
                         height: 124,
                       ),
                     ],
                   ),
-                  //  ),
                 ),
+                // ),
                 Padding(
                   padding: const EdgeInsets.fromLTRB(12, 50, 0, 0),
                   child: Container(
@@ -104,13 +104,16 @@ class _LoginPageState extends State<LoginPage> {
                               Buttons.Facebook,
                               onPressed: () {},
                             ),
-                            const SizedBox(height: 5,),
+                            const SizedBox(
+                              height: 5,
+                            ),
                             SignInButton(
                               Buttons.Apple,
                               onPressed: () {},
                             ),
-                            const SizedBox(height: 5,),
-
+                            const SizedBox(
+                              height: 5,
+                            ),
                             SignInButton(
                               Buttons.Email,
                               onPressed: () {},

@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_signin_button/flutter_signin_button.dart';
 
-class signUP extends StatefulWidget {
-  const signUP({Key? key}) : super(key: key);
+class signUP3 extends StatefulWidget {
+  const signUP3({Key? key}) : super(key: key);
 
   @override
-  State<signUP> createState() => _signUPState();
+  State<signUP3> createState() => _signUP3State();
 }
 
-class _signUPState extends State<signUP> {
+class _signUP3State extends State<signUP3> {
   @override
   Widget build(BuildContext context) {
     Size screenSize = MediaQuery.of(context).size;
@@ -29,7 +28,7 @@ class _signUPState extends State<signUP> {
                 ),
               ),
             ),
-            SizedBox(height: 70),
+            const SizedBox(height: 70),
             Padding(
               padding: const EdgeInsets.only(top: 90.0),
               child: Stack(children: <Widget>[
@@ -74,7 +73,7 @@ class _signUPState extends State<signUP> {
                     // alignment: Alignment.topCenter,
                     //  color: Colors.white,
                     height: 410,
-                    width:MediaQuery.of(context).size.width,
+                    width: MediaQuery.of(context).size.width,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
                         color: Colors.white),
@@ -82,7 +81,7 @@ class _signUPState extends State<signUP> {
                       const Padding(
                         padding: EdgeInsets.only(top: 44.0),
                         child: Text(
-                          "Sign Up",
+                          "Verification code",
                           style: TextStyle(
                               color: Colors.black,
                               fontWeight: FontWeight.bold,
@@ -90,32 +89,48 @@ class _signUPState extends State<signUP> {
                         ),
                       ),
                       const Text(
-                        "Welcome to Dash",
+                        "We have sent the code verification to your mobile number",
                         style: TextStyle(
                           color: Colors.blueGrey,
                           // fontWeight:FontWeight.bold,
                           // fontSize: 25
                         ),
                       ),
+                      const SizedBox(height: 20),
+                      const Text(
+                        "03023275555",
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 25),
+                      ),
                       Padding(
                         padding: const EdgeInsets.only(top: 50.0),
                         child: Column(
                           children: <Widget>[
-                            SignInButton(
-                              Buttons.Facebook,
-                              onPressed: () {},
+                            Padding(
+                              padding: const EdgeInsets.only(top: 40.0),
+                              child: Container(
+                                width: MediaQuery.of(context).size.width * 1.6,
+                                child: ElevatedButton(
+                                  onPressed: () {},
+                                  style: ElevatedButton.styleFrom(
+                                    primary: Colors.orangeAccent,
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(12),
+                                    ),
+                                    elevation: 15.0,
+                                  ),
+                                  child: const Padding(
+                                    padding: EdgeInsets.all(15.0),
+                                    child: Text(
+                                      'Proceed to Pay',
+                                      style: TextStyle(fontSize: 20),
+                                    ),
+                                  ),
+                                ),
+                              ),
                             ),
-                            const SizedBox(height: 5,),
-                            SignInButton(
-                              Buttons.Apple,
-                              onPressed: () {},
-                            ),
-                            const SizedBox(height: 5,),
-
-                            SignInButton(
-                              Buttons.Email,
-                              onPressed: () {},
-                            )
                           ],
                         ),
                       ),

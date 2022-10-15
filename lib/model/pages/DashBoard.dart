@@ -44,7 +44,7 @@ class FirstPage extends StatelessWidget {
                   // Padding(
                   //   padding: const EdgeInsets.only(left: 190),
                   //child:
-                  Container(
+                  SizedBox(
                     width: screenSize.width,
                     //alignment: Alignment.topRight,
                     child: Row(

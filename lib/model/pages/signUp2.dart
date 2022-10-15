@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_signin_button/flutter_signin_button.dart';
+import 'package:intl_phone_number_input/intl_phone_number_input.dart';
 
-class signUP extends StatefulWidget {
-  const signUP({Key? key}) : super(key: key);
+class SignUP2 extends StatefulWidget {
+  const SignUP2({Key? key}) : super(key: key);
 
   @override
-  State<signUP> createState() => _signUPState();
+  State<SignUP2> createState() => _SignUP2State();
 }
 
-class _signUPState extends State<signUP> {
+class _SignUP2State extends State<SignUP2> {
   @override
   Widget build(BuildContext context) {
     Size screenSize = MediaQuery.of(context).size;
@@ -29,7 +29,7 @@ class _signUPState extends State<signUP> {
                 ),
               ),
             ),
-            SizedBox(height: 70),
+            const SizedBox(height: 70),
             Padding(
               padding: const EdgeInsets.only(top: 90.0),
               child: Stack(children: <Widget>[
@@ -74,7 +74,7 @@ class _signUPState extends State<signUP> {
                     // alignment: Alignment.topCenter,
                     //  color: Colors.white,
                     height: 410,
-                    width:MediaQuery.of(context).size.width,
+                    width: MediaQuery.of(context).size.width,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
                         color: Colors.white),
@@ -101,21 +101,70 @@ class _signUPState extends State<signUP> {
                         padding: const EdgeInsets.only(top: 50.0),
                         child: Column(
                           children: <Widget>[
-                            SignInButton(
-                              Buttons.Facebook,
-                              onPressed: () {},
+                            const SizedBox(
+                              width: 250,
+                              child: TextField(
+                                decoration: InputDecoration(
+                                    border: InputBorder.none,
+                                    labelText: 'Full Name',
+                                    labelStyle: TextStyle(color: Colors.grey),
+                                    hintText: 'Muhammad Anss Gul',
+                                    hintStyle: TextStyle(color: Colors.black)),
+                              ),
                             ),
-                            const SizedBox(height: 5,),
-                            SignInButton(
-                              Buttons.Apple,
-                              onPressed: () {},
+                            Padding(
+                              padding: const EdgeInsets.only(top: 8.0),
+                              child: InternationalPhoneNumberInput(
+                                onInputChanged: (PhoneNumber number) {
+                                  //     print(number.phoneNumber);
+                                },
+                                onInputValidated: (bool value) {
+                                  //print(value);
+                                },
+                                selectorConfig: const SelectorConfig(
+                                  selectorType:
+                                      PhoneInputSelectorType.BOTTOM_SHEET,
+                                ),
+                                ignoreBlank: false,
+                                autoValidateMode: AutovalidateMode.disabled,
+                                selectorTextStyle:
+                                    const TextStyle(color: Colors.black),
+                                //initialValue: number,
+                                // textFieldController: ,
+                                //controller,
+                                formatInput: false,
+                                keyboardType:
+                                    const TextInputType.numberWithOptions(
+                                        signed: true, decimal: true),
+                                //inputBorder: OutlineInputBorder(),
+                                onSaved: (PhoneNumber number) {
+                                  //print('On Saved: $number');
+                                },
+                              ),
                             ),
-                            const SizedBox(height: 5,),
-
-                            SignInButton(
-                              Buttons.Email,
-                              onPressed: () {},
-                            )
+                            Padding(
+                              padding: const EdgeInsets.only(top: 40.0),
+                              child: Container(
+                                width: MediaQuery.of(context).size.width * 1.6,
+                                child: ElevatedButton(
+                                  onPressed: () {},
+                                  style: ElevatedButton.styleFrom(
+                                    primary: Colors.orangeAccent,
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(12),
+                                    ),
+                                    elevation: 15.0,
+                                  ),
+                                  child: const Padding(
+                                    padding: EdgeInsets.all(15.0),
+                                    child: Text(
+                                      'Proceed to Pay',
+                                      style: TextStyle(fontSize: 20),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
                           ],
                         ),
                       ),
