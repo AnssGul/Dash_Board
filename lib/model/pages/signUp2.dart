@@ -1,5 +1,7 @@
+import 'package:dash_board/model/pages/signUp3.dart';
 import 'package:flutter/material.dart';
 import 'package:intl_phone_number_input/intl_phone_number_input.dart';
+
 
 class SignUP2 extends StatefulWidget {
   const SignUP2({Key? key}) : super(key: key);
@@ -9,6 +11,10 @@ class SignUP2 extends StatefulWidget {
 }
 
 class _SignUP2State extends State<SignUP2> {
+  //String number = "";
+
+  final myController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     Size screenSize = MediaQuery.of(context).size;
@@ -56,7 +62,7 @@ class _SignUP2State extends State<SignUP2> {
                   width: screenSize.width,
                   alignment: Alignment.topRight,
                   child: Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
                       Image.asset(
                         "images/img_6.png",
@@ -66,7 +72,7 @@ class _SignUP2State extends State<SignUP2> {
                     ],
                   ),
                 ),
-                // ),
+
 
                 Padding(
                   padding: const EdgeInsets.fromLTRB(8,70,8,0),
@@ -93,30 +99,33 @@ class _SignUP2State extends State<SignUP2> {
                         "Welcome to Dash",
                         style: TextStyle(
                           color: Colors.blueGrey,
-                          // fontWeight:FontWeight.bold,
-                          // fontSize: 25
+
                         ),
                       ),
                       Padding(
                         padding: const EdgeInsets.only(top: 50.0),
                         child: Column(
                           children: <Widget>[
-                            const SizedBox(
+                             const SizedBox(
                               width: 250,
-                              child: TextField(
+                              child:TextField(
+
+
                                 decoration: InputDecoration(
                                     border: InputBorder.none,
                                     labelText: 'Full Name',
-                                    labelStyle: TextStyle(color: Colors.grey),
+                                    labelStyle: TextStyle(color: Colors.black),
                                     hintText: 'Muhammad Anss Gul',
                                     hintStyle: TextStyle(color: Colors.black)),
-                              ),
+
+                                   ),
                             ),
                             Padding(
                               padding: const EdgeInsets.only(top: 8.0),
                               child: InternationalPhoneNumberInput(
+
                                 onInputChanged: (PhoneNumber number) {
-                                  //     print(number.phoneNumber);
+                                    //print(number.phoneNumber);
                                 },
                                 onInputValidated: (bool value) {
                                   //print(value);
@@ -129,9 +138,9 @@ class _SignUP2State extends State<SignUP2> {
                                 autoValidateMode: AutovalidateMode.disabled,
                                 selectorTextStyle:
                                     const TextStyle(color: Colors.black),
-                                //initialValue: number,
-                                // textFieldController: ,
-                                //controller,
+
+                                textFieldController:myController ,
+
                                 formatInput: false,
                                 keyboardType:
                                     const TextInputType.numberWithOptions(
@@ -147,7 +156,18 @@ class _SignUP2State extends State<SignUP2> {
                               child: Container(
                                 width: MediaQuery.of(context).size.width * 1.6,
                                 child: ElevatedButton(
-                                  onPressed: () {},
+                                  onPressed: () {
+
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) =>  SignUP3(number:myController.text),
+                                      ),
+                                    );
+
+
+
+                                  },
                                   style: ElevatedButton.styleFrom(
                                     primary: Colors.orangeAccent,
                                     shape: RoundedRectangleBorder(
@@ -158,7 +178,7 @@ class _SignUP2State extends State<SignUP2> {
                                   child: const Padding(
                                     padding: EdgeInsets.all(15.0),
                                     child: Text(
-                                      'Proceed to Pay',
+                                      'Sign Up',
                                       style: TextStyle(fontSize: 20),
                                     ),
                                   ),
@@ -180,4 +200,4 @@ class _SignUP2State extends State<SignUP2> {
           ]),
         ));
   }
-}
+  }

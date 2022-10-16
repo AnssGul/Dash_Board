@@ -1,3 +1,4 @@
+import 'package:dash_board/model/pages/signUp2.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_signin_button/flutter_signin_button.dart';
 
@@ -116,7 +117,12 @@ class _LoginPageState extends State<LoginPage> {
                             ),
                             SignInButton(
                               Buttons.Email,
-                              onPressed: () {},
+                              onPressed: () {
+
+                                Navigator.push(
+                                  context,MaterialPageRoute(builder: (context) => const SignUP2()),
+                                );
+                              },
                             )
                           ],
                         ),

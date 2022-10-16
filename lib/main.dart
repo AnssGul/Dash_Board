@@ -5,6 +5,7 @@ import 'package:dash_board/model/pages/Loginpage.dart';
 import 'package:flutter/material.dart';
 
 //import 'model/pages/signUp2.dart';
+import 'model/pages/DashBoard.dart';
 import 'model/pages/signUp2.dart';
 import 'model/pages/signUp3.dart';
 
@@ -12,7 +13,7 @@ void main() => runApp(
 
  const      MaterialApp(
         debugShowCheckedModeBanner: false,
-        home:signUP3(),
+        home:FirstPage(),
       )
 
 );

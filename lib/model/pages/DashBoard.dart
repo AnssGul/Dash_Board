@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'Loginpage.dart';
+
 class FirstPage extends StatelessWidget {
   const FirstPage({Key? key}) : super(key: key);
 
@@ -7,7 +9,7 @@ class FirstPage extends StatelessWidget {
   Widget build(BuildContext context) {
     Size screenSize = MediaQuery.of(context).size;
     return Scaffold(
-      backgroundColor: Colors.grey,
+      backgroundColor: Colors.orangeAccent,
       body: Column(
         children: <Widget>[
           // Row(children:<Widget> [
@@ -68,15 +70,30 @@ class FirstPage extends StatelessWidget {
           ),
           Container(
             alignment: Alignment.center,
-            child: const Text(
-              "Dash",
-              style: TextStyle(
-                  fontSize: 50,
+            child:
+          TextButton(
+              child: Text(
+                "Dash",
+                style: TextStyle(
+    fontSize: 50,
                   color: Colors.white,
                   fontWeight: FontWeight.bold),
-            ),
+                ),
+
+              onPressed: (){
+    Navigator.push(
+    context,MaterialPageRoute(builder: (context) => const LoginPage()),
+    );
+    },
+            //const FlatButton(
+              //"Dash",
+              //style: TextStyle(
+                //  fontSize: 50,
+                  //color: Colors.white,
+                  //fontWeight: FontWeight.bold),
+            //),
           )
-        ],
+          )],
       ),
     );
   }

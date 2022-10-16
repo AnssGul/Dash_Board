@@ -1,16 +1,16 @@
+import 'package:dash_board/model/pages/pinPut.dart';
+
 import 'package:flutter/material.dart';
 
-class signUP3 extends StatefulWidget {
-  const signUP3({Key? key}) : super(key: key);
 
-  @override
-  State<signUP3> createState() => _signUP3State();
-}
+class SignUP3 extends StatelessWidget {
+  String number;
+   SignUP3({Key? key,required this.number}) : super(key: key);
+   @override
 
-class _signUP3State extends State<signUP3> {
-  @override
   Widget build(BuildContext context) {
     Size screenSize = MediaQuery.of(context).size;
+
     return Scaffold(
         backgroundColor: Colors.orangeAccent,
         body: SingleChildScrollView(
@@ -55,7 +55,7 @@ class _signUP3State extends State<signUP3> {
                   width: screenSize.width,
                   alignment: Alignment.topRight,
                   child: Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
                       Image.asset(
                         "images/img_6.png",
@@ -92,53 +92,33 @@ class _signUP3State extends State<signUP3> {
                         "We have sent the code verification to your mobile number",
                         style: TextStyle(
                           color: Colors.blueGrey,
-                          // fontWeight:FontWeight.bold,
-                          // fontSize: 25
+
                         ),
                       ),
                       const SizedBox(height: 20),
-                      const Text(
-                        "03023275555",
-                        style: TextStyle(
+                       Text(
+                         "${number}",
+
+                        style: const TextStyle(
                             color: Colors.black,
                             fontWeight: FontWeight.bold,
                             fontSize: 25),
                       ),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 50.0),
-                        child: Column(
-                          children: <Widget>[
-                            Padding(
-                              padding: const EdgeInsets.only(top: 40.0),
-                              child: Container(
-                                width: MediaQuery.of(context).size.width * 1.6,
-                                child: ElevatedButton(
-                                  onPressed: () {},
-                                  style: ElevatedButton.styleFrom(
-                                    primary: Colors.orangeAccent,
-                                    shape: RoundedRectangleBorder(
-                                      borderRadius: BorderRadius.circular(12),
-                                    ),
-                                    elevation: 15.0,
-                                  ),
-                                  child: const Padding(
-                                    padding: EdgeInsets.all(15.0),
-                                    child: Text(
-                                      'Sign Up',
-                                      style: TextStyle(fontSize: 20,
-                                      color: Colors.white),
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
+                       const SizedBox(
+                         height:30,
+                       ),
+                      Column(
+                        children:const <Widget> [
+                      Center(
+                      child: FractionallySizedBox(widthFactor: 1, child: PinputExample()),
+                ),
+
+                        ],
                       ),
+
                     ]),
 
-                    // decoration: BoxDecoration(
-                    // borderRadius: BorderRadius.circular(20),
+
                     //),
                   ),
                 ),
