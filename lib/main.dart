@@ -14,7 +14,7 @@ void main() => runApp(
 
  const      MaterialApp(
         debugShowCheckedModeBanner: false,
-        home:InterestedThing(),
+        home:SignUP2(),
       )
 
 );

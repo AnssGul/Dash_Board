@@ -97,7 +97,7 @@ class SignUP3 extends StatelessWidget {
                       ),
                       const SizedBox(height: 20),
                        Text(
-                         "${number}",
+                         number,
 
                         style: const TextStyle(
                             color: Colors.black,
