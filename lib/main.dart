@@ -7,14 +7,16 @@ import 'package:flutter/material.dart';
 
 //import 'model/pages/signUp2.dart';
 import 'model/pages/DashBoard.dart';
+import 'model/pages/allergy_information.dart';
 import 'model/pages/signUp2.dart';
 import 'model/pages/signUp3.dart';
+import 'model/pages/user_currentlocation.dart';
 
 void main() => runApp(
 
  const      MaterialApp(
         debugShowCheckedModeBanner: false,
-        home:SignUP2(),
+        home:InterestedThing(),
       )
 
 );

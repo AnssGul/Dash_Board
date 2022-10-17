@@ -1,13 +1,12 @@
 import 'package:dash_board/model/pages/pinPut.dart';
-
 import 'package:flutter/material.dart';
-
 
 class SignUP3 extends StatelessWidget {
   String number;
-   SignUP3({Key? key,required this.number}) : super(key: key);
-   @override
 
+  SignUP3({Key? key, required this.number}) : super(key: key);
+
+  @override
   Widget build(BuildContext context) {
     Size screenSize = MediaQuery.of(context).size;
 
@@ -68,7 +67,7 @@ class SignUP3 extends StatelessWidget {
                 // ),
 
                 Padding(
-                  padding: const EdgeInsets.fromLTRB(8,70,8,0),
+                  padding: const EdgeInsets.fromLTRB(8, 70, 8, 0),
                   child: Container(
                     // alignment: Alignment.topCenter,
                     //  color: Colors.white,
@@ -92,32 +91,28 @@ class SignUP3 extends StatelessWidget {
                         "We have sent the code verification to your mobile number",
                         style: TextStyle(
                           color: Colors.blueGrey,
-
                         ),
                       ),
                       const SizedBox(height: 20),
-                       Text(
-                         number,
-
+                      Text(
+                        number,
                         style: const TextStyle(
                             color: Colors.black,
                             fontWeight: FontWeight.bold,
                             fontSize: 25),
                       ),
-                       const SizedBox(
-                         height:30,
-                       ),
+                      const SizedBox(
+                        height: 30,
+                      ),
                       Column(
-                        children:const <Widget> [
-                      Center(
-                      child: FractionallySizedBox(widthFactor: 1, child: PinputExample()),
-                ),
-
+                        children: const <Widget>[
+                          Center(
+                            child: FractionallySizedBox(
+                                widthFactor: 1, child: PinputExample()),
+                          ),
                         ],
                       ),
-
                     ]),
-
 
                     //),
                   ),

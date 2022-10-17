@@ -2,7 +2,6 @@ import 'package:dash_board/model/pages/signUp3.dart';
 import 'package:flutter/material.dart';
 import 'package:intl_phone_number_input/intl_phone_number_input.dart';
 
-
 class SignUP2 extends StatefulWidget {
   const SignUP2({Key? key}) : super(key: key);
 
@@ -72,10 +71,8 @@ class _SignUP2State extends State<SignUP2> {
                     ],
                   ),
                 ),
-
-
                 Padding(
-                  padding: const EdgeInsets.fromLTRB(8,70,8,0),
+                  padding: const EdgeInsets.fromLTRB(8, 70, 8, 0),
                   child: Container(
                     // alignment: Alignment.topCenter,
                     //  color: Colors.white,
@@ -99,33 +96,28 @@ class _SignUP2State extends State<SignUP2> {
                         "Welcome to Dash",
                         style: TextStyle(
                           color: Colors.blueGrey,
-
                         ),
                       ),
                       Padding(
                         padding: const EdgeInsets.only(top: 50.0),
                         child: Column(
                           children: <Widget>[
-                             const SizedBox(
+                            const SizedBox(
                               width: 250,
-                              child:TextField(
-
-
+                              child: TextField(
                                 decoration: InputDecoration(
                                     border: InputBorder.none,
                                     labelText: 'Full Name',
                                     labelStyle: TextStyle(color: Colors.black),
                                     hintText: 'Muhammad Anss Gul',
                                     hintStyle: TextStyle(color: Colors.black)),
-
-                                   ),
+                              ),
                             ),
                             Padding(
                               padding: const EdgeInsets.only(top: 8.0),
                               child: InternationalPhoneNumberInput(
-
                                 onInputChanged: (PhoneNumber number) {
-                                    //print(number.phoneNumber);
+                                  //print(number.phoneNumber);
                                 },
                                 onInputValidated: (bool value) {
                                   //print(value);
@@ -139,7 +131,7 @@ class _SignUP2State extends State<SignUP2> {
                                 selectorTextStyle:
                                     const TextStyle(color: Colors.black),
 
-                                textFieldController:myController ,
+                                textFieldController: myController,
 
                                 formatInput: false,
                                 keyboardType:
@@ -157,16 +149,13 @@ class _SignUP2State extends State<SignUP2> {
                                 width: MediaQuery.of(context).size.width * 1.6,
                                 child: ElevatedButton(
                                   onPressed: () {
-
                                     Navigator.push(
                                       context,
                                       MaterialPageRoute(
-                                        builder: (context) =>  SignUP3(number:myController.text),
+                                        builder: (context) =>
+                                            SignUP3(number: myController.text),
                                       ),
                                     );
-
-
-
                                   },
                                   style: ElevatedButton.styleFrom(
                                     primary: Colors.orangeAccent,
@@ -200,4 +189,4 @@ class _SignUP2State extends State<SignUP2> {
           ]),
         ));
   }
-  }
+}

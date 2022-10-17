@@ -74,7 +74,7 @@ class _signUPState extends State<signUP> {
                     // alignment: Alignment.topCenter,
                     //  color: Colors.white,
                     height: 410,
-                    width:MediaQuery.of(context).size.width,
+                    width: MediaQuery.of(context).size.width,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10),
                         color: Colors.white),
@@ -105,13 +105,16 @@ class _signUPState extends State<signUP> {
                               Buttons.Facebook,
                               onPressed: () {},
                             ),
-                            const SizedBox(height: 5,),
+                            const SizedBox(
+                              height: 5,
+                            ),
                             SignInButton(
                               Buttons.Apple,
                               onPressed: () {},
                             ),
-                            const SizedBox(height: 5,),
-
+                            const SizedBox(
+                              height: 5,
+                            ),
                             SignInButton(
                               Buttons.Email,
                               onPressed: () {},

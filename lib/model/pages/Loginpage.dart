@@ -16,7 +16,8 @@ class _LoginPageState extends State<LoginPage> {
     return Scaffold(
         backgroundColor: Colors.orangeAccent,
         body: SingleChildScrollView(
-          child: Column(children: <Widget>[
+          child: Column(
+              children: <Widget>[
             Container(
               alignment: Alignment.center,
               child: const Padding(

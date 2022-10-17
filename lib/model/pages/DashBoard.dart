@@ -69,31 +69,31 @@ class FirstPage extends StatelessWidget {
             height: 70,
           ),
           Container(
-            alignment: Alignment.center,
-            child:
-          TextButton(
-              child: Text(
-                "Dash",
-                style: TextStyle(
-    fontSize: 50,
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold),
+              alignment: Alignment.center,
+              child: TextButton(
+                child: Text(
+                  "Dash",
+                  style: TextStyle(
+                      fontSize: 50,
+                      color: Colors.white,
+                      fontWeight: FontWeight.bold),
                 ),
 
-              onPressed: (){
-    Navigator.push(
-    context,MaterialPageRoute(builder: (context) => const LoginPage()),
-    );
-    },
-            //const FlatButton(
-              //"Dash",
-              //style: TextStyle(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const LoginPage()),
+                  );
+                },
+                //const FlatButton(
+                //"Dash",
+                //style: TextStyle(
                 //  fontSize: 50,
-                  //color: Colors.white,
-                  //fontWeight: FontWeight.bold),
-            //),
-          )
-          )],
+                //color: Colors.white,
+                //fontWeight: FontWeight.bold),
+                //),
+              ))
+        ],
       ),
     );
   }
