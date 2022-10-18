@@ -24,13 +24,16 @@ class _InterestedThingState extends State<InterestedThing> {
                   child: const BackButton(color: Colors.black)),
             ),
             const Padding(
-              padding: EdgeInsets.only(top: 8.0),
+              padding: EdgeInsets.only(top: 8.0,left: 11),
               child: Text(
+
                 "Tell us what you’re interested in",
                 style: TextStyle(
                     fontSize: 26,
                     fontWeight: FontWeight.bold,
-                    color: Colors.black),
+                    color: Colors.black
+                ),
+                maxLines: 2,
               ),
             ),
             Padding(
@@ -54,40 +57,49 @@ class _InterestedThingState extends State<InterestedThing> {
               width: MediaQuery.of(context).size.width,
               child: Row(
                 children: const <Widget>[
-                  Padding(
-                    padding: EdgeInsets.all(8.0),
-                    child: CircleAvatar(
-                      radius: 35,
-                      backgroundColor: Colors.orange,
-                      child: Text(
-                        "Pizza",
-                        style: TextStyle(color: Colors.white),
+                  Expanded(
+                    flex: 1,
+                    child: Padding(
+                      padding: EdgeInsets.all(8.0),
+                      child: CircleAvatar(
+                        radius: 35,
+                        backgroundColor: Colors.orange,
+                        child: Text(
+                          "Pizza",
+                          style: TextStyle(color: Colors.white),
+                        ),
                       ),
                     ),
                   ),
                   //Container(
                   //alignment: Alignment.center,
-                  Padding(
-                    padding: EdgeInsets.fromLTRB(15.0, 20, 8, 8),
-                    child: CircleAvatar(
-                      radius: 60,
-                      backgroundColor: Colors.grey,
-                      child: Text(
-                        "Burger",
-                        style: TextStyle(color: Colors.white),
+                  Expanded(
+                    flex: 1,
+                    child: Padding(
+                      padding: EdgeInsets.fromLTRB(15.0, 20, 8, 8),
+                      child: CircleAvatar(
+                        radius: 60,
+                        backgroundColor: Colors.grey,
+                        child: Text(
+                          "Burger",
+                          style: TextStyle(color: Colors.white),
+                        ),
                       ),
                     ),
                   ),
                   //),
                   //Container(
-                  Padding(
-                    padding: EdgeInsets.fromLTRB(8.0, 8, 8, 8),
-                    child: CircleAvatar(
-                      radius: 37,
-                      backgroundColor: Colors.orange,
-                      child: Text(
-                        "Veg",
-                        style: TextStyle(color: Colors.white),
+                  Expanded(
+                    flex: 1,
+                    child: Padding(
+                      padding: EdgeInsets.fromLTRB(8.0, 8, 8, 8),
+                      child: CircleAvatar(
+                        radius: 37,
+                        backgroundColor: Colors.orange,
+                        child: Text(
+                          "Veg",
+                          style: TextStyle(color: Colors.white),
+                        ),
                       ),
                     ),
                   ),
@@ -95,77 +107,74 @@ class _InterestedThingState extends State<InterestedThing> {
                 ],
               ),
             ),
-            SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
-              child: SizedBox(
-                width: MediaQuery.of(context).size.width,
-                child: Row(
-                  children: const <Widget>[
-                    //Container(
+            SizedBox(
+              width: MediaQuery.of(context).size.width,
+              child: Row(
+                children: const <Widget>[
+                  //Container(
 
-                    Expanded(
-                      flex: 1,
-                      child: Padding(
-                        padding: EdgeInsets.fromLTRB(8.0, 10, 8, 8),
-                        child: CircleAvatar(
-                          radius: 60,
-                          backgroundColor: Colors.grey,
-                          child: Text(
-                            "Chinese",
-                            style: TextStyle(color: Colors.white),
-                          ),
+                  Expanded(
+                    flex: 1,
+                    child: Padding(
+                      padding: EdgeInsets.fromLTRB(8.0, 10, 8, 8),
+                      child: CircleAvatar(
+                        radius: 60,
+                        backgroundColor: Colors.grey,
+                        child: Text(
+                          "Chinese",
+                          style: TextStyle(color: Colors.white),
                         ),
                       ),
                     ),
-                    //),
+                  ),
+                  //),
 
-                    // Container(
+                  // Container(
 
-                    Expanded(
-                      flex: 1,
-                      child: Padding(
-                        padding: EdgeInsets.fromLTRB(8.0, 60, 8, 8),
-                        child: CircleAvatar(
-                          radius: 60,
-                          backgroundColor: Colors.orange,
-                          child: Text(
-                            "Italian",
-                            style: TextStyle(color: Colors.white),
-                          ),
+                  Expanded(
+                    flex: 1,
+                    child: Padding(
+                      padding: EdgeInsets.fromLTRB(8.0, 60, 8, 8),
+                      child: CircleAvatar(
+                        radius: 60,
+                        backgroundColor: Colors.orange,
+                        child: Text(
+                          "Italian",
+                          style: TextStyle(color: Colors.white),
                         ),
                       ),
                     ),
+                  ),
 
-                    //),
-                    //Container(
+                  //),
+                  //Container(
 
-                    Expanded(
-                      flex: 1,
-                      child: Padding(
-                        padding: EdgeInsets.fromLTRB(8.0, 10, 8, 8),
-                        child: CircleAvatar(
-                          radius: 60,
-                          backgroundColor: Colors.grey,
-                          child: Text(
-                            "Biryani",
-                            style: TextStyle(color: Colors.white),
-                          ),
+                  Expanded(
+                    flex: 1,
+                    child: Padding(
+                      padding: EdgeInsets.fromLTRB(8.0, 10, 8, 8),
+                      child: CircleAvatar(
+                        radius: 60,
+                        backgroundColor: Colors.grey,
+                        child: Text(
+                          "Biryani",
+                          style: TextStyle(color: Colors.white),
                         ),
-                        ),
-                    ),
-                    //),
-                  ],
-                ),
+                      ),
+                      ),
+                  ),
+                  //),
+                ],
               ),
             ),
-            SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
-              child: SizedBox(
-                width: MediaQuery.of(context).size.width,
-                child: Row(
-                  children: <Widget>[
-                    //Container(
-                    const Padding(
+            SizedBox(
+              width: MediaQuery.of(context).size.width,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: <Widget>[
+                  //Container(
+                  const Expanded(
+                    child: Padding(
                       padding: EdgeInsets.fromLTRB(8.0, 0, 8, 150),
                       child: CircleAvatar(
                         radius: 70,
@@ -176,36 +185,39 @@ class _InterestedThingState extends State<InterestedThing> {
                         ),
                       ),
                     ),
-                    //),
-                    //Container(
-                    Column(
-                      children: const <Widget>[
-                        Padding(
-                          padding: EdgeInsets.all(8),
-                          child: CircleAvatar(
-                            radius: 35,
-                            backgroundColor: Colors.orange,
-                            child: Text(
-                              "Indian",
-                              style: TextStyle(color: Colors.white),
-                            ),
+                  ),
+                  //),
+                  //Container(
+                  Column(
+                    children: const <Widget>[
+                      Padding(
+                        padding: EdgeInsets.all(8),
+                        child: CircleAvatar(
+                          radius: 35,
+                          backgroundColor: Colors.orange,
+                          child: Text(
+                            "Wine",
+                            style: TextStyle(color: Colors.white),
                           ),
                         ),
-                        Padding(
-                          padding: EdgeInsets.all(8),
-                          child: CircleAvatar(
-                            radius: 35,
-                            backgroundColor: Colors.orange,
-                            child: Text(
-                              "Wine",
-                              style: TextStyle(color: Colors.white),
-                            ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.all(8),
+                        child: CircleAvatar(
+                          radius: 35,
+                          backgroundColor: Colors.orange,
+                          child: Text(
+                            "Indian",
+                            style: TextStyle(color: Colors.white),
                           ),
                         ),
-                      ],
-                    ),
-                    //),
-                    const Padding(
+                      ),
+                    ],
+                  ),
+                  //),
+                  const Expanded(
+                    
+                    child: Padding(
                       padding: EdgeInsets.fromLTRB(8, 0, 8, 200),
                       child: CircleAvatar(
                         radius: 60,
@@ -216,8 +228,8 @@ class _InterestedThingState extends State<InterestedThing> {
                         ),
                       ),
                     ),
-                  ],
-                ),
+                  ),
+                ],
               ),
             ),
             Padding(

@@ -30,6 +30,7 @@ class _AllergyInformationState extends State<AllergyInformation> {
                     fontSize: 26,
                     fontWeight: FontWeight.bold,
                     color: Colors.black),
+                maxLines: 1,
               ),
             ),
             Padding(
@@ -55,40 +56,49 @@ class _AllergyInformationState extends State<AllergyInformation> {
                 width: MediaQuery.of(context).size.width,
                 child: Row(
                   children: const <Widget>[
-                    Padding(
-                      padding: EdgeInsets.all(8.0),
-                      child: CircleAvatar(
-                        radius: 35,
-                        backgroundColor: Colors.orange,
-                        child: Text(
-                          "Fish",
-                          style: TextStyle(color: Colors.white),
+                    Expanded(
+                      flex:1,
+                      child: Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: CircleAvatar(
+                          radius: 35,
+                          backgroundColor: Colors.orange,
+                          child: Text(
+                            "Fish",
+                            style: TextStyle(color: Colors.white),
+                          ),
                         ),
                       ),
                     ),
                     //Container(
                     //alignment: Alignment.center,
-                    Padding(
-                      padding: EdgeInsets.fromLTRB(15.0, 20, 8, 8),
-                      child: CircleAvatar(
-                        radius: 60,
-                        backgroundColor: Colors.grey,
-                        child: Text(
-                          "Corn",
-                          style: TextStyle(color: Colors.white),
+                    Expanded(
+                      flex: 1,
+                      child: Padding(
+                        padding: EdgeInsets.fromLTRB(15.0, 20, 8, 8),
+                        child: CircleAvatar(
+                          radius: 60,
+                          backgroundColor: Colors.grey,
+                          child: Text(
+                            "Corn",
+                            style: TextStyle(color: Colors.white),
+                          ),
                         ),
                       ),
                     ),
                     //),
                     //Container(
-                    Padding(
-                      padding: EdgeInsets.fromLTRB(8.0, 8, 8, 8),
-                      child: CircleAvatar(
-                        radius: 37,
-                        backgroundColor: Colors.orange,
-                        child: Text(
-                          "Egg",
-                          style: TextStyle(color: Colors.white),
+                    Expanded(
+                      flex: 1,
+                      child: Padding(
+                        padding: EdgeInsets.fromLTRB(8.0, 8, 8, 8),
+                        child: CircleAvatar(
+                          radius: 37,
+                          backgroundColor: Colors.orange,
+                          child: Text(
+                            "Egg",
+                            style: TextStyle(color: Colors.white),
+                          ),
                         ),
                       ),
                     ),
@@ -97,15 +107,15 @@ class _AllergyInformationState extends State<AllergyInformation> {
                 ),
               ),
             ),
-            SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
-              child: SizedBox(
-                width: MediaQuery.of(context).size.width,
-                child: Row(
-                  children: const <Widget>[
-                    //Container(
+            SizedBox(
+              width: MediaQuery.of(context).size.width,
+              child: Row(
+                children: const <Widget>[
+                  //Container(
 
-                    Padding(
+                  Expanded(
+                    flex: 1,
+                    child: Padding(
                       padding: EdgeInsets.fromLTRB(8.0, 10, 8, 8),
                       child: CircleAvatar(
                         radius: 60,
@@ -116,11 +126,14 @@ class _AllergyInformationState extends State<AllergyInformation> {
                         ),
                       ),
                     ),
-                    //),
+                  ),
+                  //),
 
-                    // Container(
+                  // Container(
 
-                    Padding(
+                  Expanded(
+                    flex: 1,
+                    child: Padding(
                       padding: EdgeInsets.fromLTRB(8.0, 60, 8, 8),
                       child: CircleAvatar(
                         radius: 60,
@@ -131,11 +144,14 @@ class _AllergyInformationState extends State<AllergyInformation> {
                         ),
                       ),
                     ),
+                  ),
 
-                    //),
-                    //Container(
+                  //),
+                  //Container(
 
-                    Padding(
+                  Expanded(
+                    flex: 1,
+                    child: Padding(
                       padding: EdgeInsets.fromLTRB(8.0, 10, 8, 8),
                       child: CircleAvatar(
                         radius: 60,
@@ -146,19 +162,19 @@ class _AllergyInformationState extends State<AllergyInformation> {
                         ),
                       ),
                     ),
-                    //),
-                  ],
-                ),
+                  ),
+                  //),
+                ],
               ),
             ),
-            SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
-              child: SizedBox(
-                width: MediaQuery.of(context).size.width,
-                child: Row(
-                  children: <Widget>[
-                    //Container(
-                    const Padding(
+            SizedBox(
+              width: MediaQuery.of(context).size.width,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: <Widget>[
+                  //Container(
+                  Expanded(
+                    child: const Padding(
                       padding: EdgeInsets.fromLTRB(8.0, 0, 8, 150),
                       child: CircleAvatar(
                         radius: 70,
@@ -169,36 +185,38 @@ class _AllergyInformationState extends State<AllergyInformation> {
                         ),
                       ),
                     ),
-                    //),
-                    //Container(
-                    Column(
-                      children: const <Widget>[
-                        Padding(
-                          padding: EdgeInsets.all(8),
-                          child: CircleAvatar(
-                            radius: 35,
-                            backgroundColor: Colors.orange,
-                            child: Text(
-                              "Sugar",
-                              style: TextStyle(color: Colors.white),
-                            ),
+                  ),
+                  //),
+                  //Container(
+                  Column(
+                    children: const <Widget>[
+                      Padding(
+                        padding: EdgeInsets.all(8),
+                        child: CircleAvatar(
+                          radius: 35,
+                          backgroundColor: Colors.orange,
+                          child: Text(
+                            "Sugar",
+                            style: TextStyle(color: Colors.white),
                           ),
                         ),
-                        Padding(
-                          padding: EdgeInsets.all(8),
-                          child: CircleAvatar(
-                            radius: 35,
-                            backgroundColor: Colors.orange,
-                            child: Text(
-                              "Transfat",
-                              style: TextStyle(color: Colors.white),
-                            ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.all(8),
+                        child: CircleAvatar(
+                          radius: 35,
+                          backgroundColor: Colors.orange,
+                          child: Text(
+                            "Transfat",
+                            style: TextStyle(color: Colors.white),
                           ),
                         ),
-                      ],
-                    ),
-                    //),
-                    const Padding(
+                      ),
+                    ],
+                  ),
+                  //),
+                  Expanded(
+                    child: const Padding(
                       padding: EdgeInsets.fromLTRB(8, 0, 8, 200),
                       child: CircleAvatar(
                         radius: 60,
@@ -209,8 +227,8 @@ class _AllergyInformationState extends State<AllergyInformation> {
                         ),
                       ),
                     ),
-                  ],
-                ),
+                  ),
+                ],
               ),
             ),
             Padding(

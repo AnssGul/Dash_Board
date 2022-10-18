@@ -24,14 +24,14 @@ class _UserCurrentLocationState extends State<UserCurrentLocation> {
         infoWindow: InfoWindow(title: "The title of the marker"))
   ];
 
-  Future<Position> userCurrentLocation() async {
-    await Geolocator.requestPermission()
-        .then((value) {})
-        .onError((error, stackTrace) {
-      print("error$error");
-    });
-    return await Geolocator.getCurrentPosition();
-  }
+  // Future<Position> userCurrentLocation() async {
+  //   await Geolocator.requestPermission()
+  //       .then((value) {})
+  //       .onError((error, stackTrace) {
+  //     print("error$error");
+  //   });
+  //   return await Geolocator.getCurrentPosition();
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -45,10 +45,10 @@ class _UserCurrentLocationState extends State<UserCurrentLocation> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          userCurrentLocation().then((value) {
-            print("Print my current Location");
-            print(value.latitude.toString() + " " + value.longitude.toString());
-          });
+          // userCurrentLocation().then((value) {
+          //   print("Print my current Location");
+          //   print(value.latitude.toString() + " " + value.longitude.toString());
+          // });
         },
         child: const Icon(Icons.local_activity),
       ),
