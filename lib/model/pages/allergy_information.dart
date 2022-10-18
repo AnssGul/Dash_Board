@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+
 class AllergyInformation extends StatefulWidget {
   const AllergyInformation({Key? key}) : super(key: key);
 
