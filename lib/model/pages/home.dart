@@ -71,7 +71,7 @@ class Home extends StatefulWidget {
                       Icons.alarm,
                       size: 26.0,
                     ),
-                  )
+                  ),
               ),
             ],
           ),
