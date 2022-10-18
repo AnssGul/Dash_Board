@@ -14,7 +14,7 @@ class Home extends StatefulWidget {
         child:Scaffold(
           appBar:AppBar(
             title: Column(
-              children:<Widget> [
+              children:const <Widget> [
               Text("Hello Alexa ",
               style: TextStyle(
               fontWeight: FontWeight.bold,
@@ -37,7 +37,7 @@ class Home extends StatefulWidget {
             toolbarHeight: 280,
             backgroundColor: Colors.orange,
 
-            bottom: TabBar(
+            bottom: const TabBar(
               tabs: <Widget>[
                 Text("Dining",style: TextStyle(fontSize: 16),),
                 Text("Pickup",
@@ -54,20 +54,20 @@ class Home extends StatefulWidget {
             actions: [
 
           Padding(
-          padding: EdgeInsets.only(right: 156.0),
+          padding: const EdgeInsets.only(right: 156.0),
             child: GestureDetector(
               onTap: () {},
-              child: Icon(
+              child: const Icon(
                 Icons.waving_hand_rounded,
                 size: 26.0,
               ),
             )
         ),
               Padding(
-                  padding: EdgeInsets.only(right: 20.0),
+                  padding: const EdgeInsets.only(right: 20.0),
                   child: GestureDetector(
                     onTap: () {},
-                    child: Icon(
+                    child: const Icon(
                       Icons.alarm,
                       size: 26.0,
                     ),
