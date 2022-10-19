@@ -20,21 +20,19 @@ class Home extends StatefulWidget {
               fontWeight: FontWeight.bold,
               fontSize: 25
               ),),
-                Text(
-                  "Eat right! Be tight!",
-                  style: TextStyle(color: Colors.white, fontSize: 14.0),
+                Padding(
+                  padding: EdgeInsets.only(right: 17),
+                  child: Text(
+                    "Eat right! Be tight!",
+                    style: TextStyle(color: Colors.white, fontSize: 14.0),
+                  ),
                 )
               ],
             ),
-            //title: Text("Hello Alexa ",
-            //style: TextStyle(
-              //fontWeight: FontWeight.bold,
-              //fontSize: 25
-            //),),
-            //subtitle: Text("software engineer"),
-            titleSpacing: 30,
 
-            toolbarHeight: 280,
+            titleSpacing: 40,
+
+            toolbarHeight: 150,
             backgroundColor: Colors.orange,
 
             bottom: const TabBar(
@@ -53,16 +51,16 @@ class Home extends StatefulWidget {
             ),
             actions: [
 
-          Padding(
-          padding: const EdgeInsets.only(right: 156.0),
-            child: GestureDetector(
-              onTap: () {},
-              child: const Icon(
-                Icons.waving_hand_rounded,
-                size: 26.0,
-              ),
-            )
-        ),
+        //   Padding(
+        //   padding: const EdgeInsets.only(right: 156.0),
+        //     child: GestureDetector(
+        //       onTap: () {},
+        //       child: const Icon(
+        //         Icons.waving_hand_rounded,
+        //         size: 26.0,
+        //       ),
+        //     )
+        // ),
               Padding(
                   padding: const EdgeInsets.only(right: 20.0),
                   child: GestureDetector(
@@ -75,7 +73,25 @@ class Home extends StatefulWidget {
               ),
             ],
           ),
-
+body: Column(
+children:<Widget> [
+  Padding(
+    padding: const EdgeInsets.all(8.0),
+    child: TextField(
+      decoration: InputDecoration(
+          hintText: "Search for restaurant, item or more",
+          hintStyle: const TextStyle(color: Colors.grey,
+          fontWeight: FontWeight.bold),
+          suffixIcon: const Icon(Icons.search),
+          fillColor: Colors.grey,
+          focusColor: Colors.grey,
+          border: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(20),
+          )),
+    ),
+  ),
+],
+),
 
         ));
       }
