@@ -86,7 +86,7 @@ children:<Widget> [
           fillColor: Colors.grey,
           focusColor: Colors.grey,
           border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(18),
+            borderRadius: BorderRadius.circular(19),
           )),
     ),
   ),
