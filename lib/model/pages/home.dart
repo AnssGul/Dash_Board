@@ -100,9 +100,13 @@ class _HomeState extends State<Home> {
                        child: Container(
                          height: 20,
                         width: 70,
+                         decoration: BoxDecoration(
+                             borderRadius: BorderRadius.circular(20),
+                             border: Border.all(color: Colors.black12),
+                             color: Colors.white),
 
                          child: RichText(
-                           text: TextSpan(
+                           text: const TextSpan(
                              children: [
                                WidgetSpan(
                                  child: Icon(Icons.sort, size: 14),
@@ -129,19 +133,19 @@ class _HomeState extends State<Home> {
                              ],
                            ),
                          ),
-                         decoration: BoxDecoration(
-                             borderRadius: BorderRadius.circular(20),
-                             border: Border.all(color: Colors.black12),
-                             color: Colors.white),
                          //color: Colors.pink,
                        ),
                      ),
                      Container(
                        height: 20,
                        width: 110,
+                      decoration: BoxDecoration(
+                           borderRadius: BorderRadius.circular(20),
+                           border: Border.all(color: Colors.black12),
+                           color: Colors.white),
 
                        child: RichText(
-                         text: TextSpan(
+                         text: const TextSpan(
                            children: [
                              WidgetSpan(
                                child: Icon(Icons.person_add, size: 14),
@@ -156,10 +160,6 @@ class _HomeState extends State<Home> {
                            ],
                          ),
                        ),
-                      decoration: BoxDecoration(
-                           borderRadius: BorderRadius.circular(20),
-                           border: Border.all(color: Colors.black12),
-                           color: Colors.white),
                        //color: Colors.pink,
                      ),
                      Padding(
@@ -167,9 +167,13 @@ class _HomeState extends State<Home> {
                        child: Container(
                          height: 20,
                         width: 75,
+                         decoration: BoxDecoration(
+                             borderRadius: BorderRadius.circular(20),
+                             border: Border.all(color: Colors.black12),
+                             color: Colors.white),
 
                          child: RichText(
-                           text: TextSpan(
+                           text: const TextSpan(
                              children: [
                                WidgetSpan(
                                  child: Icon(Icons.location_on, size: 14),
@@ -185,19 +189,19 @@ class _HomeState extends State<Home> {
                              ],
                            ),
                          ),
-                         decoration: BoxDecoration(
-                             borderRadius: BorderRadius.circular(20),
-                             border: Border.all(color: Colors.black12),
-                             color: Colors.white),
                          //color: Colors.pink,
                        ),
                      ),
                      Container(
                        height: 20,
                        width: 90,
+                      decoration: BoxDecoration(
+                           borderRadius: BorderRadius.circular(20),
+                           border: Border.all(color: Colors.black12),
+                           color: Colors.white),
 
                        child: RichText(
-                         text: TextSpan(
+                         text: const TextSpan(
                            children: [
                              WidgetSpan(
                                child: Icon(Icons.star_border, size: 14),
@@ -219,10 +223,6 @@ class _HomeState extends State<Home> {
                            ],
                          ),
                        ),
-                      decoration: BoxDecoration(
-                           borderRadius: BorderRadius.circular(20),
-                           border: Border.all(color: Colors.black12),
-                           color: Colors.white),
                        //color: Colors.pink,
                      ),
                    ],
@@ -232,7 +232,7 @@ class _HomeState extends State<Home> {
                 padding: const EdgeInsets.only(left: 24),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
+                  children: const [
                     Text("My Upcoming Order",
                     style: TextStyle(
                       fontSize: 15,
@@ -251,7 +251,7 @@ class _HomeState extends State<Home> {
                     //),
                     Padding(
                       padding: const EdgeInsets.all(8.0),
-                      child: Container(
+                      child: SizedBox(
                         height: 230,
                         child: Stack(
                           children: [
@@ -275,11 +275,6 @@ class _HomeState extends State<Home> {
                                child:  Container(
                                  height: 130,
                                  width: 110,
-                                child:  Image.asset(
-                                  "images/img_8.png",
-                                  fit: BoxFit.cover,
-
-                                ),
                                 // color: Colors.pink,
                                  decoration: BoxDecoration(
                                    color: Colors.pink,
@@ -291,6 +286,11 @@ class _HomeState extends State<Home> {
                                    //  alignment: Alignment.topCenter,
                                  //  ),
                                  ),
+                                child:  Image.asset(
+                                  "images/img_8.png",
+                                  fit: BoxFit.cover,
+
+                                ),
                                 // child: Text("YOUR TEXT"),
                                ),
                                 ),
@@ -302,50 +302,46 @@ class _HomeState extends State<Home> {
                             top: 20,
                             left: 130,
 
-                            child:Container(
-                              child: Column(
-                                children: [
-                                  Text("Cafe Vita",
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 20
-                                  ),),
-                                  Padding(
-                                    padding: const EdgeInsets.only(top:6),
-                                    child: Text("1 x white bean hummus, 1  x Apple Brie",
+                            child:Column(
+                              children: [
+                                const Text("Cafe Vita",
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 20
+                                ),),
+                                const Padding(
+                                  padding: EdgeInsets.only(top:6),
+                                  child: Text("1 x white bean hummus, 1  x Apple Brie",
 
-                                      style: TextStyle(
-                                          color: Colors.black,
-                                          fontSize: 13
-                                      ),
+                                    style: TextStyle(
+                                        color: Colors.black,
+                                        fontSize: 13
+                                    ),
+                                  maxLines: 2,),
+                                ),
+                                const Padding(
+                                  padding: EdgeInsets.only(top:6),
+                                  child: Text("Today at 06:10 pm - 4 People",
+
+                                    style: TextStyle(
+                                        color: Colors.pink,
+                                        fontSize: 13,
+                                      fontWeight: FontWeight.bold
+                                    ),
                                     maxLines: 2,),
-                                  ),
-                                  Padding(
-                                    padding: const EdgeInsets.only(top:6),
-                                    child: Text("Today at 06:10 pm - 4 People",
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: OutlinedButton(
 
-                                      style: TextStyle(
-                                          color: Colors.pink,
-                                          fontSize: 13,
-                                        fontWeight: FontWeight.bold
-                                      ),
-                                      maxLines: 2,),
-                                  ),
-                                  Padding(
-                                    padding: const EdgeInsets.all(8.0),
-                                    child: OutlinedButton(
+                                      //color: Colors.white,
+                                      onPressed: ()=>{},
 
-                                        //color: Colors.white,
-                                        onPressed: ()=>{},
-
-                                        child:Text("Check in")),
-                                  )
+                                      child:const Text("Check in")),
+                                )
 
 
-                                ],
-                              ),
-
-
+                              ],
                             ) )
                           ],
                         ),
@@ -354,7 +350,7 @@ class _HomeState extends State<Home> {
 
                     Padding(
                       padding: const EdgeInsets.all(8.0),
-                      child: Container(
+                      child: SizedBox(
                         height: 230,
                         child: Stack(
                           children: [
@@ -378,11 +374,6 @@ class _HomeState extends State<Home> {
                                 child:  Container(
                                   height: 130,
                                   width: 110,
-                                  child:  Image.asset(
-                                    "images/img_8.png",
-                                    fit: BoxFit.cover,
-
-                                  ),
                                   // color: Colors.pink,
                                   decoration: BoxDecoration(
                                     color: Colors.pink,
@@ -393,6 +384,11 @@ class _HomeState extends State<Home> {
                                     //fit: BoxFit.fitWidth,
                                     //  alignment: Alignment.topCenter,
                                     //  ),
+                                  ),
+                                  child:  Image.asset(
+                                    "images/img_8.png",
+                                    fit: BoxFit.cover,
+
                                   ),
                                   // child: Text("YOUR TEXT"),
                                 ),
@@ -405,51 +401,47 @@ class _HomeState extends State<Home> {
                                 top: 20,
                                 left: 130,
 
-                                child:Container(
-                                  child: Column(
-                                    children: [
-                                      Text("Cafe Vita",
+                                child:Column(
+                                  children: [
+                                    const Text("Cafe Vita",
+                                      style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 20
+                                      ),),
+                                    const Padding(
+                                      padding: EdgeInsets.only(top:6),
+                                      child: Text("1 x white bean hummus, 1  x Apple Brie",
+
                                         style: TextStyle(
-                                            color: Colors.white,
-                                            fontSize: 20
-                                        ),),
-                                      Padding(
-                                        padding: const EdgeInsets.only(top:6),
-                                        child: Text("1 x white bean hummus, 1  x Apple Brie",
+                                            color: Colors.black,
+                                            fontSize: 13,
 
-                                          style: TextStyle(
-                                              color: Colors.black,
-                                              fontSize: 13,
+                                        ),
+                                        maxLines: 2,),
+                                    ),
+                                    const Padding(
+                                      padding: EdgeInsets.only(top:6),
+                                      child: Text("Today at 06:10 pm - 4 People",
 
-                                          ),
-                                          maxLines: 2,),
-                                      ),
-                                      Padding(
-                                        padding: const EdgeInsets.only(top:6),
-                                        child: Text("Today at 06:10 pm - 4 People",
+                                        style: TextStyle(
+                                            color: Colors.pink,
+                                            fontSize: 13,
+                                          fontWeight: FontWeight.bold
+                                        ),
+                                        maxLines: 2,),
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: OutlinedButton(
 
-                                          style: TextStyle(
-                                              color: Colors.pink,
-                                              fontSize: 13,
-                                            fontWeight: FontWeight.bold
-                                          ),
-                                          maxLines: 2,),
-                                      ),
-                                      Padding(
-                                        padding: const EdgeInsets.all(8.0),
-                                        child: OutlinedButton(
+                                        //color: Colors.white,
+                                          onPressed: ()=>{},
 
-                                          //color: Colors.white,
-                                            onPressed: ()=>{},
-
-                                            child:Text("Check in")),
-                                      ),
+                                          child:const Text("Check in")),
+                                    ),
 
 
-                                    ],
-                                  ),
-
-
+                                  ],
                                 ) ),
                           ],
                         ),
@@ -462,9 +454,9 @@ class _HomeState extends State<Home> {
               ),
              Row(
                mainAxisAlignment: MainAxisAlignment.start,
-               children: [
+               children: const [
                  Padding(
-                   padding: const EdgeInsets.only(left: 12.0),
+                   padding: EdgeInsets.only(left: 12.0),
                    child: Text("Mood for…",
                      style: TextStyle(
                          fontSize: 15,
@@ -622,7 +614,7 @@ class _HomeState extends State<Home> {
 
                     height: 40,
                     width:180 ,
-                    child: Text("Recommended for you",
+                    child: const Text("Recommended for you",
                       style: TextStyle(
                           fontSize: 15,
                           fontWeight: FontWeight.bold
@@ -631,15 +623,19 @@ class _HomeState extends State<Home> {
                     ),
                   ),
                   const SizedBox(
-                    width: 155,
+                    width: 120,
                   ),
-                  Container(
-                    //color: Colors.white,
-                    child:const Text("View All",style: TextStyle(color: Colors.orange,
-                    fontWeight:FontWeight.bold),) ,
-
-                    height: 30,
-                    width:50 ,
+                  const Padding(
+                    padding: EdgeInsets.all(8.0),
+                    child: SizedBox(
+                      //color: Colors.white,
+                      height: 30,
+                      width:50 ,
+                      //color: Colors.white,
+                      child:Text("View All",style: TextStyle(color: Colors.orange,
+                      fontWeight:FontWeight.bold),
+                      maxLines: 1,) ,
+                    ),
                   )
 
                 ],
@@ -649,47 +645,658 @@ class _HomeState extends State<Home> {
                 child: Row(
                crossAxisAlignment: CrossAxisAlignment.start,
                   children:<Widget> [
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Container(
-                        height: 170,
-                        width: 250,
-                        child:  Image.asset(
-                          "images/img_13.png",
-                          fit: BoxFit.cover,
+                    Column(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Container(
+                            height: 170,
+                            width: 250,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(30),
+                            ),
+                            child:  Image.asset(
+                              "images/img_13.png",
+                              fit: BoxFit.cover,
 
+                            ),
+
+
+                          ),
                         ),
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(30),
-                        ),
 
+                        Column(
 
-                      ),
+                          children: [
+                            const Padding(
+                              padding: EdgeInsets.all(8.0),
+                              child: Text("McDonald's",
+                                style: TextStyle(
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.bold
+                                ),
+                                maxLines: 1,
+                              ),
+                            ),
+                            Row(
+                              children: const [
+                                Text("Chinese - American",
+                                  style: TextStyle(
+                                      fontSize: 15,
+                                     // fontWeight: FontWeight.bold
+                                  color: Colors.black38
+                                  ),
+                                  maxLines: 1,
+                                ),
+                                Padding(
+                                  padding: EdgeInsets.only(left: 8),
+                                  child: Icon(Icons.star,
+                                  color: Colors.green,),
+                                ),
+                                Text("5.0"),
+                              ],
+                            ),
+                            Container(
+                              height: 20,
+                              width: 60,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.
+                                  circular(10),
+                                color: Colors.orange,
+                              ),
+
+                              child: const Center(child: Text("7:00 PM",
+                              maxLines: 1,)),
+                            )
+                          ],
+                        )
+                      ],
                     ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Container(
-                        height: 170,
-                        width: 250,
-                        child:  Image.asset(
-                          "images/img_13.png",
-                          fit: BoxFit.cover,
+                    Column(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Container(
+                            height: 170,
+                            width: 250,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(30),
+                            ),
+                            child:  Image.asset(
+                              "images/img_13.png",
+                              fit: BoxFit.cover,
+
+                            ),
+
+                          ),
 
                         ),
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(30),
-                        ),
+                        Column(
 
-                      ),
+                          children: [
+                            const Padding(
+                              padding: EdgeInsets.all(8.0),
+                              child: Text("McDonald's",
+                                style: TextStyle(
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.bold
+                                ),
+                                maxLines: 1,
+                              ),
+                            ),
+                            Row(
+                              children: const [
+                                Text("Chinese - American",
+                                  style: TextStyle(
+                                      fontSize: 15,
+                                      // fontWeight: FontWeight.bold
+                                      color: Colors.black38
+                                  ),
+                                  maxLines: 1,
+                                ),
+                                Padding(
+                                  padding: EdgeInsets.only(left: 8),
+                                  child: Icon(Icons.star,
+                                    color: Colors.green,),
+                                ),
+                                Text("5.0"),
+                              ],
+                            ),
+                            Container(
+                              height: 20,
+                              width: 60,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.
+                                circular(10),
+                                color: Colors.orange,
+                              ),
 
+                              child: const Center(child: Text("7:00 PM",
+                                maxLines: 1,)),
+                            )
+                          ],
+                        )
+
+                      ],
                     ),
 
                   ],
                 ),
-              )
+
+
+              ),
+
+              SingleChildScrollView(
+                scrollDirection:Axis.horizontal,
+                child: Row(
+                  children:<Widget> [
+                    //SizedBox(
+                    //height:MediaQuery.of(context).size.width*0.9,
+                    //),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: SizedBox(
+                        height: 230,
+                        child: Stack(
+                          children: [
+                            Positioned(child: Material(
+                              child:Container(
+                                height: 170,
+                                width: 250,
+                                decoration: BoxDecoration(
+                                  color: Colors.orange,
+                                  borderRadius: BorderRadius.circular(30),
+
+                                ),
+                              ) ,
+                            )),
+                         Positioned(
+                            top: 20,
+                             left: 15,
+                             child:Column(
+                               children: const [
+                                 Text("50% OFF & get free delivery",
+                                   style: TextStyle(
+                                       fontSize: 13,
+                                       fontWeight: FontWeight.bold,
+                                     color: Colors.white
+                                   ),
+                                   maxLines: 2,
+                                 ),
+                                 Padding(
+                                   padding: EdgeInsets.only(top: 12,right: 85),
+                                   child: Text("Use Coupon:",
+                                     style: TextStyle(
+                                         fontSize: 13,
+                                         //fontWeight: FontWeight.bold
+                                       color: Colors.black54
+                                     ),
+                                     maxLines: 2,
+                                   ),
+                                 ),
+                                 Padding(
+                                   padding: EdgeInsets.only(right: 85),
+                                   child: Text("WELCOME05",
+                                     style: TextStyle(
+                                         fontSize: 13,
+                                         //fontWeight: FontWeight.bold,
+                                         color: Colors.white
+                                     ),
+                                     maxLines: 2,
+                                   ),
+                                 ),
+                                 Padding(
+                                   padding: EdgeInsets.only(top: 12,right: 100),
+                                   child:Icon(Icons.navigate_next,
+                                   color: Colors.white,)
+                                 ),
+
+                               ],
+                             )
+
+                         ),
+                            Positioned(
+                                top: 50,
+                                left: 140,
+
+                                child:Padding(
+                                  padding: const EdgeInsets.only(bottom: 100.0),
+                                  child: SizedBox(
+                                    height: 110,
+                                    width: 105,
+                                    child: Column(
+                                      children: [
+                                        Image.asset(
+                                          "images/img_15.png",
+                                          fit: BoxFit.cover,
+
+                                        ),
+
+                                      ],
+                                    ),
+
+
+                                  ),
+                                ) )
+                          ],
+                        ),
+                      ),
+                    ),
+
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: SizedBox(
+                        height: 230,
+                        child: Stack(
+                          children: [
+                            Positioned(child: Material(
+                              child:Container(
+                                height:170,
+                                width: 250,
+                                decoration: BoxDecoration(
+                                  color: Colors.blue,
+                                  borderRadius: BorderRadius.circular(30),
+
+                                ),
+                              ) ,
+                            )),
+                            Positioned(
+                                top: 20,
+                                left: 15,
+                                child:Column(
+                                  children: const [
+                                    Text("50% OFF & get free delivery",
+                                      style: TextStyle(
+                                          fontSize: 13,
+                                          fontWeight: FontWeight.bold,
+                                          color: Colors.white
+                                      ),
+                                      maxLines: 2,
+                                    ),
+                                    Padding(
+                                      padding: EdgeInsets.only(top: 12,right: 85),
+                                      child: Text("Use Coupon:",
+                                        style: TextStyle(
+                                            fontSize: 13,
+                                            //fontWeight: FontWeight.bold
+                                            color: Colors.black54
+                                        ),
+                                        maxLines: 2,
+                                      ),
+                                    ),
+                                    Padding(
+                                      padding: EdgeInsets.only(right: 85),
+                                      child: Text("WELCOME05",
+                                        style: TextStyle(
+                                            fontSize: 13,
+                                            //fontWeight: FontWeight.bold,
+                                            color: Colors.white
+                                        ),
+                                        maxLines: 2,
+                                      ),
+                                    ),
+                                    Padding(
+                                        padding: EdgeInsets.only(top: 12,right: 100),
+                                        child:Icon(Icons.navigate_next,
+                                          color: Colors.white,)
+                                    ),
+
+                                  ],
+                                )
+                            ),
+                            Positioned(
+                                top: 50,
+                                left: 140,
+
+                                child:Padding(
+                                  padding: const EdgeInsets.only(bottom: 100.0),
+                                  child: SizedBox(
+                                    height: 110,
+                                    width: 105,
+                                    child: Column(
+                                      children: [
+                                        Image.asset(
+                                          "images/img_15.png",
+                                          fit: BoxFit.cover,
+
+                                        ),
+
+                                      ],
+                                    ),
+
+
+                                  ),
+                                ) ),
+                          ],
+                        ),
+                      ),
+                    ),
+
+
+                  ],
+                ),
+              ),
+
+              Row(
+                children:<Widget> [
+                  Container(
+                    margin: const EdgeInsets.all(8),
+
+                    height: 40,
+                    width:180 ,
+                    child: const Text("Must try visit",
+                      style: TextStyle(
+                          fontSize: 15,
+                          fontWeight: FontWeight.bold
+                      ),
+                      maxLines: 1,
+                    ),
+                  ),
+                  const SizedBox(
+                    width: 120,
+                  ),
+                  const Padding(
+                    padding: EdgeInsets.all(8.0),
+                    child: SizedBox(
+                      //color: Colors.white,
+                      height: 30,
+                      width:50 ,
+                      //color: Colors.white,
+                      child:Text("View All",style: TextStyle(color: Colors.orange,
+                          fontWeight:FontWeight.bold),
+                        maxLines: 1,) ,
+                    ),
+                  )
+
+                ],
+              ),
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children:<Widget> [
+                    Column(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Container(
+                            height: 170,
+                            width: 220,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(30),
+                            ),
+                            child:  Image.asset(
+                              "images/img_17.png",
+                              fit: BoxFit.cover,
+
+                            ),
+
+
+                          ),
+                        ),
+
+                        Column(
+
+                          children: [
+                            const Padding(
+                              padding: EdgeInsets.all(8.0),
+                              child: Text("Cafe Vita",
+                                style: TextStyle(
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.bold
+                                ),
+                                maxLines: 1,
+                              ),
+                            ),
+                            Row(
+                              children: const [
+                                Text("Indian",
+                                  style: TextStyle(
+                                      fontSize: 15,
+                                      // fontWeight: FontWeight.bold
+                                      color: Colors.black38
+                                  ),
+                                  maxLines: 1,
+                                ),
+                                Padding(
+                                  padding: EdgeInsets.only(left: 8),
+                                  child: Icon(Icons.star,
+                                    color: Colors.green,),
+                                ),
+                                Text("5.0"),
+                              ],
+                            ),
+                            Row(
+                              children: [
+                                Container(
+                                  height: 20,
+                                  width: 60,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.
+                                    circular(10),
+                                    color: Colors.orange,
+                                  ),
+
+                                  child: const Center(child: Text("6:45 PM",
+                                    maxLines: 1,)),
+                                ),
+                                Container(
+                                  height: 20,
+                                  width: 60,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.
+                                    circular(10),
+                                    color: Colors.orange,
+                                  ),
+
+                                  child: const Center(child: Text("7:00 PM",
+                                    maxLines: 1,)),
+                                ),
+                                Container(
+                                  height: 20,
+                                  width: 60,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.
+                                    circular(10),
+                                    color: Colors.orange,
+                                  ),
+
+                                  child: const Center(child: Text("7:45 PM",
+                                    maxLines: 1,)),
+                                )
+                              ],
+                            ),
+
+                          ],
+                        )
+                      ],
+                    ),
+
+                    Column(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Container(
+                            height: 170,
+                            width: 220,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(30),
+                            ),
+                            child:  Image.asset(
+                              "images/img_17.png",
+                              fit: BoxFit.cover,
+
+                            ),
+
+                          ),
+
+                        ),
+                        Column(
+
+                          children: [
+                            const Padding(
+                              padding: EdgeInsets.all(8.0),
+                              child: Text("Cafe Vita",
+                                style: TextStyle(
+                                    fontSize: 15,
+                                    fontWeight: FontWeight.bold
+                                ),
+                                maxLines: 1,
+                              ),
+                            ),
+                            Row(
+                              children: const [
+                                Text("Indian",
+                                  style: TextStyle(
+                                      fontSize: 15,
+                                      // fontWeight: FontWeight.bold
+                                      color: Colors.black38
+                                  ),
+                                  maxLines: 1,
+                                ),
+                                Padding(
+                                  padding: EdgeInsets.only(left: 8),
+                                  child: Icon(Icons.star,
+                                    color: Colors.green,),
+                                ),
+                                Text("5.0"),
+                              ],
+                            ),
+                            Row(
+                              children: [
+                                Container(
+                                  height: 20,
+                                  width: 60,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.
+                                    circular(10),
+                                    color: Colors.orange,
+                                  ),
+
+                                  child: const Center(child: Text("7:00 PM",
+                                    maxLines: 1,)),
+                                ),
+                                Container(
+                                  height: 20,
+                                  width: 60,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.
+                                    circular(10),
+                                    color: Colors.orange,
+                                  ),
+
+                                  child: const Center(child: Text("7:00 PM",
+                                    maxLines: 1,)),
+                                )
+                              ],
+                            ),
+
+                          ],
+                        )
+
+                      ],
+                    ),
+
+                  ],
+                ),
+
+
+              ),
+
+
+
+
 
             ],
           ),
+
+
+        ),
+        floatingActionButton: FloatingActionButton(
+          child: Icon(Icons.add),
+          onPressed: ()=>{},
+        ),
+        floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+        bottomNavigationBar: BottomAppBar(
+          shape: CircularNotchedRectangle(),
+          notchMargin: 10,
+          child: Container(
+            height: 60,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    MaterialButton(minWidth: 40,onPressed:() =>{},
+                    child:Column(
+                      children: [
+                        Icon(Icons.home,
+                        color: Colors.orange,
+                        size: 40,),
+                        Text("Home",style: TextStyle(
+                          color: Colors.orange
+                        ),)
+                      ],
+                    ) ,
+
+
+                    ),
+                    MaterialButton(minWidth: 80,onPressed:() =>{},
+                      child:Column(
+                        children: [
+                          Icon(Icons.explore,
+                            color: Colors.grey,
+                          size: 40,),
+                          Text("Explore",style: TextStyle(
+                              color: Colors.grey
+                          ),)
+                        ],
+                      ) ,
+
+
+                    )
+                  ],
+                ),
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    MaterialButton(minWidth: 40,onPressed:() =>{},
+                      child:Column(
+                        children: [
+                          Icon(Icons.reorder,
+                            color: Colors.grey,
+                            size: 40,),
+                          Text("Booking",style: TextStyle(
+                              color: Colors.grey
+                          ),)
+                        ],
+                      ) ,
+
+
+                    ),
+                    MaterialButton(minWidth: 80,onPressed:() =>{},
+                      child:Column(
+                        children: [
+                          Icon(Icons.explore,
+                            color: Colors.grey,
+                            size: 40,),
+                          Text("Explore",style: TextStyle(
+                              color: Colors.grey
+                          ),)
+                        ],
+                      ) ,
+
+
+                    )
+                  ],
+                )
+              ],
+            ),
+          ),
+
+
+
         ),
       ));
 }
