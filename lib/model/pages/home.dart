@@ -71,7 +71,7 @@ class _HomeState extends State<Home> {
         ),
         body: SingleChildScrollView(
           child: Column(
-
+          crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               Padding(
                 padding: const EdgeInsets.fromLTRB(8.0, 14, 8, 8),
@@ -1213,14 +1213,14 @@ class _HomeState extends State<Home> {
 
         ),
         floatingActionButton: FloatingActionButton(
-          child: Icon(Icons.add),
+          child: const Icon(Icons.add),
           onPressed: ()=>{},
         ),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
         bottomNavigationBar: BottomAppBar(
-          shape: CircularNotchedRectangle(),
+          shape: const CircularNotchedRectangle(),
           notchMargin: 10,
-          child: Container(
+          child: SizedBox(
             height: 60,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -1230,7 +1230,7 @@ class _HomeState extends State<Home> {
                   children: [
                     MaterialButton(minWidth: 40,onPressed:() =>{},
                     child:Column(
-                      children: [
+                      children: const [
                         Icon(Icons.home,
                         color: Colors.orange,
                         size: 40,),
@@ -1244,7 +1244,7 @@ class _HomeState extends State<Home> {
                     ),
                     MaterialButton(minWidth: 80,onPressed:() =>{},
                       child:Column(
-                        children: [
+                        children: const [
                           Icon(Icons.explore,
                             color: Colors.grey,
                           size: 40,),
@@ -1261,9 +1261,9 @@ class _HomeState extends State<Home> {
                 Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    MaterialButton(minWidth: 40,onPressed:() =>{},
+                    MaterialButton(minWidth: 80,onPressed:() =>{},
                       child:Column(
-                        children: [
+                        children: const [
                           Icon(Icons.reorder,
                             color: Colors.grey,
                             size: 40,),
@@ -1277,7 +1277,7 @@ class _HomeState extends State<Home> {
                     ),
                     MaterialButton(minWidth: 80,onPressed:() =>{},
                       child:Column(
-                        children: [
+                        children: const [
                           Icon(Icons.explore,
                             color: Colors.grey,
                             size: 40,),
