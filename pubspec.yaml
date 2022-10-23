@@ -46,6 +46,7 @@ dependencies:
   flutter_polyline_points: ^1.0.0
   geolocator: ^9.0.2
 
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -85,7 +86,7 @@ flutter:
       - images/img_14.png
       - images/img_15.png
       - images/img_17.png
-
+      - images/img_18.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
