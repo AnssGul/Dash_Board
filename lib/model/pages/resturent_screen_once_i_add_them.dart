@@ -32,7 +32,10 @@ class _ResturentScreenState extends State<ResturentScreen> {
 
         ],
       ),
-body: Column(
+body:ListView.separated(
+    itemCount:5,
+    itemBuilder: (context,index){
+ return Column(
   crossAxisAlignment: CrossAxisAlignment.start,
   children:<Widget> [
     Padding(
@@ -488,7 +491,11 @@ const SizedBox(width: 5,),
 
 
   ],
-),
-    );
+);
+  },
+  separatorBuilder:(context,index){
+      return Divider();
+  },
+    ));
   }
 }
