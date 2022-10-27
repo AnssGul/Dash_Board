@@ -14,5 +14,5 @@ import 'model/pages/DashBoard.dart';
 void main() => runApp(
     const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Home(),
+      home: ResturentScreen(),
     ));

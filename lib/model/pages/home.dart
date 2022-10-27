@@ -9,30 +9,32 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  List<String> name = ["Cafe Vita"];
+  List<String> title = ["1 x white bean hummus, 1  x Apple Brie"];
+  List<String> time = ["Today at 06:10 pm - 4 People"];
+
   @override
   Widget build(BuildContext context) => DefaultTabController(
       length: 4,
       child: Scaffold(
         appBar: AppBar(
           title: Row(
-            children:  <Widget>[
-            Column(
-              children: [
-                Text(
-                  "Hello Alexa👏",
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
-                ),
-                Padding(
-                  padding: EdgeInsets.only(right: 43),
-                  child: Text(
-                    "Eat right! Be tight!",
-                    style: TextStyle(color: Colors.white, fontSize: 14.0),
+            children: <Widget>[
+              Column(
+                children: const [
+                  Text(
+                    "Hello Alexa👏",
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
                   ),
-                ),
-
-              ],
-            ),
-
+                  Padding(
+                    padding: EdgeInsets.only(right: 43),
+                    child: Text(
+                      "Eat right! Be tight!",
+                      style: TextStyle(color: Colors.white, fontSize: 14.0),
+                    ),
+                  ),
+                ],
+              ),
             ],
           ),
           titleSpacing: 40,
@@ -52,66 +54,56 @@ class _HomeState extends State<Home> {
               Text(""),
             ],
           ),
-actions: [
-  Padding(
-    padding: const EdgeInsets.only(top: 40,right: 4),
-    child: Stack(
-      children: [
-        Positioned(
+          actions: [
+            Padding(
+              padding: const EdgeInsets.only(top: 40, right: 4),
+              child: Stack(
+                children: [
+                  Positioned(
+                    child: Container(
+                      height: 30,
+                      width: 30,
+                      decoration: BoxDecoration(
+                          color: Colors.orange,
+                          borderRadius: BorderRadius.circular(20),
+                          border: Border.all(color: Colors.white)),
+                      child: const Icon(
+                        Icons.notifications_active_outlined,
+                        color: Colors.white,
 
-          child: Container(
-            height: 30,
-            width: 30,
-            child: Icon(Icons.notifications_active_outlined,
-            color: Colors.white,
-
-         //     Border.all(color: Colors.black)
-           ),
-            decoration:BoxDecoration(
-                color: Colors.orange,
-                borderRadius: BorderRadius.circular(20),
-              border: Border.all(
-                color: Colors.white
-
-              )
-
-            ),
-
-          ),
-
-        ),
-        Positioned(
-          left: 4,
-            child:Container(
-          height: 12,
-            width: 15,
-          decoration:BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(10),
-              border: Border.all(
-                  color: Colors.white
-
+                        //     Border.all(color: Colors.black)
+                      ),
+                    ),
+                  ),
+                  Positioned(
+                      left: 4,
+                      child: Container(
+                        height: 12,
+                        width: 15,
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(10),
+                          border: Border.all(color: Colors.white),
+                        ),
+                        child: const Center(
+                            child: Text(
+                          "1",
+                          style: TextStyle(color: Colors.orange, fontSize: 9),
+                        )),
+                      ))
+                ],
               ),
-
-
-          ),
-          child: Center(child: Text("1",style: TextStyle(color: Colors.orange,
-          fontSize: 9),)),
-        ) )
-      ],
-    ),
-  )
-],
-
+            )
+          ],
         ),
         body: SingleChildScrollView(
           child: Padding(
-            padding: const EdgeInsets.only(left: 25.0),
+            padding: const EdgeInsets.only(left: 14.0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 Padding(
-                  padding: const EdgeInsets.fromLTRB(8.0, 14, 8, 8),
+                  padding: const EdgeInsets.fromLTRB(6.0, 14, 8, 8),
                   child: TextField(
                     decoration: InputDecoration(
                         hintText: "Search for restaurant, item or more",
@@ -131,90 +123,71 @@ actions: [
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: <Widget>[
                       Padding(
-                        padding: const EdgeInsets.fromLTRB(12, 8, 8, 8),
+                        padding: const EdgeInsets.all(8),
                         child: Container(
-                          height: 20,
+                          height: 25,
                           width: 70,
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(20),
                               border: Border.all(color: Colors.black12),
                               color: Colors.white),
-
-                          child: RichText(
-                            text: const TextSpan(
-                              children: [
-                                WidgetSpan(
-                                  child: Icon(Icons.sort, size: 14),
-                                ),
-                                TextSpan(
-                                  text: "Sort ",
-                                  style: TextStyle(
-                                      color: Colors.black,
-                                      fontSize: 10,
-                                      letterSpacing: 3,
-                                      fontWeight: FontWeight.bold),
-                                ),
-
-                                WidgetSpan(
-                                  child: Icon(
-                                    FontAwesomeIcons.list,
-                                    size: 14,
-                                    color: Colors.black,
-                                  ),
-                                )
-                                // TextSpan(
-                                // text: " to add",
-                                //),
-                              ],
-                            ),
-                          ),
-                          //color: Colors.pink,
-                        ),
-                      ),
-                      Container(
-                        height: 20,
-                        width: 110,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(20),
-                            border: Border.all(color: Colors.black12),
-                            color: Colors.white),
-
-                        child: RichText(
-                          text: const TextSpan(
-                            children: [
-                              WidgetSpan(
-                                child: Icon(Icons.person_add, size: 14),
-                              ),
-                              TextSpan(
-                                text: " 2 - 7:00 PM tonight",
+                          child: Row(
+                            children: const [
+                              Icon(Icons.sort, size: 14),
+                              Text(
+                                "Sort ",
                                 style: TextStyle(
                                     color: Colors.black,
                                     fontSize: 10,
+                                    letterSpacing: 3,
                                     fontWeight: FontWeight.bold),
+                              ),
+                              Icon(
+                                FontAwesomeIcons.list,
+                                size: 14,
+                                color: Colors.black,
                               ),
                             ],
                           ),
                         ),
-                        //color: Colors.pink,
                       ),
+                      Container(
+                          height: 25,
+                          width: 117,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(20),
+                              border: Border.all(color: Colors.green),
+                              color: Colors.white),
+                          child: Row(
+                            children: const [
+                              Icon(
+                                Icons.person_add,
+                                size: 14,
+                                color: Colors.green,
+                              ),
+                              Text(
+                                " 2 - 7:00 PM tonight",
+                                style: TextStyle(
+                                    color: Colors.green,
+                                    fontSize: 10,
+                                    fontWeight: FontWeight.bold),
+                              ),
+                            ],
+                          )),
                       Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Container(
-                          height: 20,
-                          width: 75,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(20),
-                              border: Border.all(color: Colors.black12),
-                              color: Colors.white),
-
-                          child: RichText(
-                            text: const TextSpan(
-                              children: [
-                                WidgetSpan(
-                                  child: Icon(Icons.location_on, size: 14),
-                                ),
-                                TextSpan(
-                                  text: "Nearby",
+                            height: 25,
+                            width: 75,
+                            decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(20),
+                                border: Border.all(color: Colors.black12),
+                                color: Colors.white),
+                            child: Row(
+                              children: const [
+                                Icon(Icons.location_on, size: 14),
+                                Text(
+                                  "Nearby",
                                   style: TextStyle(
                                       color: Colors.black,
                                       fontSize: 10,
@@ -222,56 +195,44 @@ actions: [
                                       letterSpacing: 2),
                                 ),
                               ],
-                            ),
-                          ),
-                          //color: Colors.pink,
-                        ),
+                            )),
                       ),
                       Container(
-                        height: 20,
-                        width: 90,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(20),
-                            border: Border.all(color: Colors.black12),
-                            color: Colors.white),
-
-                        child: RichText(
-                          text: const TextSpan(
-                            children: [
-                              WidgetSpan(
-                                child: Icon(Icons.star_border, size: 14),
-                              ),
-                              TextSpan(
-                                text: " Over 4.5  |",
+                          height: 25,
+                          width: 90,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(20),
+                              border: Border.all(color: Colors.black12),
+                              color: Colors.white),
+                          child: Row(
+                            children: const [
+                              Icon(Icons.star_border, size: 14),
+                              Text(
+                                " Over 4.5  |",
                                 style: TextStyle(
                                     color: Colors.black,
                                     fontSize: 10,
                                     fontWeight: FontWeight.bold),
                               ),
-                              WidgetSpan(
-                                child: Icon(
-                                  Icons.arrow_downward,
-                                  size: 14,
-                                  color: Colors.black,
-                                ),
-                              )
+                              Icon(
+                                Icons.arrow_downward,
+                                size: 14,
+                                color: Colors.black,
+                              ),
                             ],
-                          ),
-                        ),
-                        //color: Colors.pink,
-                      ),
+                          )),
                     ],
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(left: 24),
+                  padding: const EdgeInsets.only(left: 14),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: const [
                       Text(
                         "My Upcoming Order",
-                        style:
-                            TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+                        style: TextStyle(
+                            fontSize: 15, fontWeight: FontWeight.bold),
                       ),
                     ],
                   ),
@@ -284,7 +245,7 @@ actions: [
                       //height:MediaQuery.of(context).size.width*0.9,
                       //),
                       Padding(
-                        padding: const EdgeInsets.only(left: 25,right:8,top:8,bottom:8),
+                        padding: const EdgeInsets.only(left: 14),
                         child: SizedBox(
                           height: 230,
                           child: Stack(
@@ -333,9 +294,10 @@ actions: [
                               ),
                               Positioned(
                                   top: 20,
-                                  left: 138,
+                                  left: 140,
                                   child: Column(
-                                   crossAxisAlignment: CrossAxisAlignment.start,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
                                     children: [
                                       const Text(
                                         "Cafe Vita",
@@ -347,7 +309,8 @@ actions: [
                                         child: Text(
                                           "1 x white bean hummus, 1  x Apple Brie",
                                           style: TextStyle(
-                                              color: Colors.black, fontSize: 13),
+                                              color: Colors.black,
+                                              fontSize: 13),
                                           maxLines: 2,
                                         ),
                                       ),
@@ -362,18 +325,19 @@ actions: [
                                           maxLines: 2,
                                         ),
                                       ),
-                              Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Container(
-                                  width: 80,
-                                  height: 30,
-                                  child: Center(child: Text("Check in")),
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(10),
-                                    color: Colors.white
-                                  ),
-                                ),
-                              )
+                                      Padding(
+                                        padding: const EdgeInsets.all(8.0),
+                                        child: Container(
+                                          width: 80,
+                                          height: 30,
+                                          decoration: BoxDecoration(
+                                              borderRadius:
+                                                  BorderRadius.circular(10),
+                                              color: Colors.white),
+                                          child: const Center(
+                                              child: Text("Check in")),
+                                        ),
+                                      )
                                     ],
                                   ))
                             ],
@@ -382,7 +346,8 @@ actions: [
                       ),
 
                       Padding(
-                        padding: const EdgeInsets.only(left: 25,right:8,top:8,bottom:8),
+                        padding: const EdgeInsets.only(
+                            left: 17, right: 8, top: 8, bottom: 8),
                         child: SizedBox(
                           height: 230,
                           child: Stack(
@@ -391,7 +356,7 @@ actions: [
                                   child: Material(
                                 child: Container(
                                   height: 140,
-                                  width: 360,
+                                  width: 310,
                                   decoration: BoxDecoration(
                                     color: Colors.orangeAccent,
                                     borderRadius: BorderRadius.circular(30),
@@ -431,9 +396,10 @@ actions: [
                               ),
                               Positioned(
                                   top: 20,
-                                  left: 130,
+                                  left: 140,
                                   child: Column(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
                                     children: [
                                       const Text(
                                         "Cafe Vita",
@@ -467,11 +433,12 @@ actions: [
                                         child: Container(
                                           width: 80,
                                           height: 30,
-                                          child: Center(child: Text("Check in")),
                                           decoration: BoxDecoration(
-                                              borderRadius: BorderRadius.circular(10),
-                                              color: Colors.white
-                                          ),
+                                              borderRadius:
+                                                  BorderRadius.circular(10),
+                                              color: Colors.white),
+                                          child: const Center(
+                                              child: Text("Check in")),
                                         ),
                                       ),
                                     ],
@@ -484,17 +451,16 @@ actions: [
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(left: 25.0),
+                  padding: const EdgeInsets.only(
+                    left: 14,
+                  ),
                   child: Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: const [
-                      Padding(
-                        padding: EdgeInsets.only(left: 12.0),
-                        child: Text(
-                          "Mood for…",
-                          style:
-                              TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
-                        ),
+                      Text(
+                        'Mood for… ',
+                        style: TextStyle(
+                            fontSize: 15, fontWeight: FontWeight.bold),
                       ),
                     ],
                   ),
@@ -502,7 +468,7 @@ actions: [
                 SingleChildScrollView(
                   scrollDirection: Axis.horizontal,
                   child: Padding(
-                    padding: const EdgeInsets.only(left: 25.0),
+                    padding: const EdgeInsets.only(left: 14.0),
                     child: Row(
                       children: <Widget>[
                         Padding(
@@ -513,7 +479,8 @@ actions: [
                                   CircleAvatar(
                                     backgroundColor: Colors.black26,
                                     radius: 30,
-                                    backgroundImage: AssetImage('images/img_9.png'),
+                                    backgroundImage:
+                                        AssetImage('images/img_9.png'),
                                   ),
                                   SizedBox(height: 10),
                                   SizedBox(
@@ -555,8 +522,8 @@ actions: [
                                       child: Text(
                                         'Chinese',
                                         textAlign: TextAlign.center,
-                                        style:
-                                            TextStyle(color: Colors.orangeAccent),
+                                        style: TextStyle(
+                                            color: Colors.orangeAccent),
                                       ))
                                 ])),
                         Padding(
@@ -584,9 +551,9 @@ actions: [
                                   CircleAvatar(
                                     backgroundColor: Colors.black26,
                                     radius: 30,
-                                    backgroundImage:
-                                        AssetImage('images/img_11.png',
-                                        ),
+                                    backgroundImage: AssetImage(
+                                      'images/img_11.png',
+                                    ),
                                   ),
                                   SizedBox(height: 10),
                                   SizedBox(
@@ -619,7 +586,8 @@ actions: [
                                   CircleAvatar(
                                     backgroundColor: Colors.black26,
                                     radius: 30,
-                                    backgroundImage: AssetImage('images/img_9.png'),
+                                    backgroundImage:
+                                        AssetImage('images/img_9.png'),
                                   ),
                                   SizedBox(height: 10),
                                   SizedBox(
@@ -631,38 +599,61 @@ actions: [
                     ),
                   ),
                 ),
+                // Padding(
+                //   padding: const EdgeInsets.only(left: 17.0),
+                //   child: Row(
+                //     children: <Widget>[
+                //       Container(
+                //         margin: const EdgeInsets.all(8),
+                //         height: 40,
+                //         width: 180,
+                //         child: const Text(
+                //           "Recommended for you",
+                //           style:
+                //               TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+                //           maxLines: 1,
+                //         ),
+                //       ),
+                //   Row(
+                //     mainAxisAlignment: MainAxisAlignment.end,
+                //     children: [
+                //
+                //       const Padding(
+                //         padding: EdgeInsets.all(8.0),
+                //         child: SizedBox(
+                //           //color: Colors.white,
+                //           height: 30,
+                //           width: 50,
+                //           //color: Colors.white,
+                //           child: Text(
+                //             "View All",
+                //             style: TextStyle(
+                //                 color: Colors.orange, fontWeight: FontWeight.bold),
+                //             maxLines: 1,
+                //           ),
+                //         ),
+                //       )
+                //     ],
+                //   )
+                //     ],
+                //   ),
+                // ),
                 Padding(
-                  padding: const EdgeInsets.only(left: 25.0),
+                  padding: const EdgeInsets.only(
+                    left: 14,
+                  ),
                   child: Row(
-                    children: <Widget>[
-                      Container(
-                        margin: const EdgeInsets.all(8),
-                        height: 40,
-                        width: 180,
-                        child: const Text(
-                          "Recommended for you",
-                          style:
-                              TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
-                          maxLines: 1,
-                        ),
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: const [
+                      Text(
+                        'Reccommended ',
+                        style: TextStyle(
+                            fontSize: 15, fontWeight: FontWeight.bold),
                       ),
-                      const SizedBox(
-                        width: 120,
-                      ),
-                      const Padding(
-                        padding: EdgeInsets.all(8.0),
-                        child: SizedBox(
-                          //color: Colors.white,
-                          height: 30,
-                          width: 50,
-                          //color: Colors.white,
-                          child: Text(
-                            "View All",
-                            style: TextStyle(
-                                color: Colors.orange, fontWeight: FontWeight.bold),
-                            maxLines: 1,
-                          ),
-                        ),
+                      Text(
+                        'View all',
+                        style: TextStyle(
+                            fontSize: 15, fontWeight: FontWeight.bold),
                       )
                     ],
                   ),
@@ -670,7 +661,7 @@ actions: [
                 SingleChildScrollView(
                   scrollDirection: Axis.horizontal,
                   child: Padding(
-                    padding: const EdgeInsets.only(left: 25.0),
+                    padding: const EdgeInsets.only(left: 17.0),
                     child: Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
@@ -700,7 +691,8 @@ actions: [
                                     child: Text(
                                       "McDonald's",
                                       style: TextStyle(
-                                          fontSize: 15, fontWeight: FontWeight.bold),
+                                          fontSize: 15,
+                                          fontWeight: FontWeight.bold),
                                       maxLines: 1,
                                     ),
                                   ),
@@ -745,7 +737,7 @@ actions: [
                         Column(
                           children: [
                             Padding(
-                              padding: const EdgeInsets.fromLTRB(30.0,8,8,8),
+                              padding: const EdgeInsets.fromLTRB(30.0, 8, 8, 8),
                               child: Container(
                                 height: 170,
                                 width: 250,
@@ -768,7 +760,8 @@ actions: [
                                     child: Text(
                                       "McDonald's",
                                       style: TextStyle(
-                                          fontSize: 15, fontWeight: FontWeight.bold),
+                                          fontSize: 15,
+                                          fontWeight: FontWeight.bold),
                                       maxLines: 1,
                                     ),
                                   ),
@@ -822,7 +815,7 @@ actions: [
                       //height:MediaQuery.of(context).size.width*0.9,
                       //),
                       Padding(
-                        padding: const EdgeInsets.only(left: 25.0,top: 8),
+                        padding: const EdgeInsets.only(left: 17.0, top: 8),
                         child: SizedBox(
                           height: 230,
                           child: Stack(
@@ -842,9 +835,9 @@ actions: [
                                   top: 20,
                                   left: 15,
                                   child: Column(
-                                    children:  [
-                                      Padding(
-                                        padding: const EdgeInsets.only(right: 130.0),
+                                    children: [
+                                      const Padding(
+                                        padding: EdgeInsets.only(right: 130.0),
                                         child: Text(
                                           "50% OFF & ",
                                           style: TextStyle(
@@ -854,8 +847,8 @@ actions: [
                                           maxLines: 2,
                                         ),
                                       ),
-                                      Padding(
-                                        padding: const EdgeInsets.only(right: 110.0),
+                                      const Padding(
+                                        padding: EdgeInsets.only(right: 110.0),
                                         child: Text(
                                           "get free delivery",
                                           style: TextStyle(
@@ -865,9 +858,9 @@ actions: [
                                           maxLines: 2,
                                         ),
                                       ),
-                                      Padding(
-                                        padding:
-                                            EdgeInsets.only(top: 40, right: 120),
+                                      const Padding(
+                                        padding: EdgeInsets.only(
+                                            top: 25, right: 120),
                                         child: Text(
                                           "Use Coupon:",
                                           style: TextStyle(
@@ -877,8 +870,9 @@ actions: [
                                           maxLines: 2,
                                         ),
                                       ),
-                                      Padding(
-                                        padding: EdgeInsets.only(right: 120,top: 5),
+                                      const Padding(
+                                        padding:
+                                            EdgeInsets.only(right: 120, top: 2),
                                         child: Text(
                                           "WELCOME05",
                                           style: TextStyle(
@@ -889,17 +883,17 @@ actions: [
                                         ),
                                       ),
                                       Padding(
-                                        padding: const EdgeInsets.only(right: 130),
+                                        padding:
+                                            const EdgeInsets.only(right: 130),
                                         child: Container(
-                                          width: 50,
+                                          width: 30,
                                           height: 30,
-                                          child: Center(
-                                              child:Icon(Icons.navigate_next)
-                                          ),
                                           decoration: BoxDecoration(
-                                              borderRadius: BorderRadius.circular(27),
-                                              color: Colors.white
-                                          ),
+                                              borderRadius:
+                                                  BorderRadius.circular(30),
+                                              color: Colors.white),
+                                          child: const Center(
+                                              child: Icon(Icons.navigate_next)),
                                         ),
                                       ),
                                     ],
@@ -908,7 +902,8 @@ actions: [
                                   top: 50,
                                   left: 140,
                                   child: Padding(
-                                    padding: const EdgeInsets.only(bottom: 70.0),
+                                    padding:
+                                        const EdgeInsets.only(bottom: 70.0),
                                     child: SizedBox(
                                       height: 110,
                                       width: 105,
@@ -928,7 +923,7 @@ actions: [
                       ),
 
                       Padding(
-                        padding: const EdgeInsets.only(left: 25.0,top: 8),
+                        padding: const EdgeInsets.only(left: 17.0, top: 8),
                         child: SizedBox(
                           height: 230,
                           child: Stack(
@@ -948,9 +943,9 @@ actions: [
                                   top: 20,
                                   left: 15,
                                   child: Column(
-                                    children:  [
-                                      Padding(
-                                        padding: const EdgeInsets.only(right: 130.0),
+                                    children: [
+                                      const Padding(
+                                        padding: EdgeInsets.only(right: 130.0),
                                         child: Text(
                                           "50% OFF & ",
                                           style: TextStyle(
@@ -960,8 +955,8 @@ actions: [
                                           maxLines: 2,
                                         ),
                                       ),
-                                      Padding(
-                                        padding: const EdgeInsets.only(right: 110.0),
+                                      const Padding(
+                                        padding: EdgeInsets.only(right: 110.0),
                                         child: Text(
                                           "get free delivery",
                                           style: TextStyle(
@@ -971,9 +966,9 @@ actions: [
                                           maxLines: 2,
                                         ),
                                       ),
-                                      Padding(
-                                        padding:
-                                        EdgeInsets.only(top: 40, right: 120),
+                                      const Padding(
+                                        padding: EdgeInsets.only(
+                                            top: 25, right: 122),
                                         child: Text(
                                           "Use Coupon:",
                                           style: TextStyle(
@@ -983,8 +978,9 @@ actions: [
                                           maxLines: 2,
                                         ),
                                       ),
-                                      Padding(
-                                        padding: EdgeInsets.only(right: 120,top: 5),
+                                      const Padding(
+                                        padding:
+                                            EdgeInsets.only(right: 122, top: 2),
                                         child: Text(
                                           "WELCOME05",
                                           style: TextStyle(
@@ -995,17 +991,17 @@ actions: [
                                         ),
                                       ),
                                       Padding(
-                                        padding: const EdgeInsets.only(top: 10,right: 130),
+                                        padding:
+                                            const EdgeInsets.only(right: 140),
                                         child: Container(
-                                          width: 50,
+                                          width: 25,
                                           height: 30,
-                                          child: Center(
-                                              child:Icon(Icons.navigate_next)
-                                          ),
                                           decoration: BoxDecoration(
-                                              borderRadius: BorderRadius.circular(27),
-                                              color: Colors.white
-                                          ),
+                                              borderRadius:
+                                                  BorderRadius.circular(30),
+                                              color: Colors.white),
+                                          child: const Center(
+                                              child: Icon(Icons.navigate_next)),
                                         ),
                                       ),
                                     ],
@@ -1014,7 +1010,8 @@ actions: [
                                   top: 50,
                                   left: 140,
                                   child: Padding(
-                                    padding: const EdgeInsets.only(bottom: 70.0),
+                                    padding:
+                                        const EdgeInsets.only(bottom: 70.0),
                                     child: SizedBox(
                                       height: 110,
                                       width: 105,
@@ -1032,9 +1029,9 @@ actions: [
                                   top: 20,
                                   left: 15,
                                   child: Column(
-                                    children:  [
-                                      Padding(
-                                        padding: const EdgeInsets.only(right: 130.0),
+                                    children: [
+                                      const Padding(
+                                        padding: EdgeInsets.only(right: 130.0),
                                         child: Text(
                                           "50% OFF & ",
                                           style: TextStyle(
@@ -1044,8 +1041,8 @@ actions: [
                                           maxLines: 2,
                                         ),
                                       ),
-                                      Padding(
-                                        padding: const EdgeInsets.only(right: 110.0),
+                                      const Padding(
+                                        padding: EdgeInsets.only(right: 110.0),
                                         child: Text(
                                           "get free delivery",
                                           style: TextStyle(
@@ -1055,9 +1052,9 @@ actions: [
                                           maxLines: 2,
                                         ),
                                       ),
-                                      Padding(
-                                        padding:
-                                        EdgeInsets.only(top: 40, right: 120),
+                                      const Padding(
+                                        padding: EdgeInsets.only(
+                                            top: 25, right: 122),
                                         child: Text(
                                           "Use Coupon:",
                                           style: TextStyle(
@@ -1067,8 +1064,9 @@ actions: [
                                           maxLines: 2,
                                         ),
                                       ),
-                                      Padding(
-                                        padding: EdgeInsets.only(right: 120,top: 5),
+                                      const Padding(
+                                        padding:
+                                            EdgeInsets.only(right: 122, top: 2),
                                         child: Text(
                                           "WELCOME05",
                                           style: TextStyle(
@@ -1079,17 +1077,17 @@ actions: [
                                         ),
                                       ),
                                       Padding(
-                                        padding: const EdgeInsets.only(right: 130),
+                                        padding:
+                                            const EdgeInsets.only(right: 142),
                                         child: Container(
-                                          width: 45,
+                                          width: 30,
                                           height: 30,
-                                          child: Center(
-                                              child:Icon(Icons.navigate_next)
-                                          ),
                                           decoration: BoxDecoration(
-                                              borderRadius: BorderRadius.circular(30),
-                                              color: Colors.white
-                                          ),
+                                              borderRadius:
+                                                  BorderRadius.circular(30),
+                                              color: Colors.white),
+                                          child: const Center(
+                                              child: Icon(Icons.navigate_next)),
                                         ),
                                       ),
                                     ],
@@ -1098,7 +1096,8 @@ actions: [
                                   top: 50,
                                   left: 140,
                                   child: Padding(
-                                    padding: const EdgeInsets.only(bottom: 100.0),
+                                    padding:
+                                        const EdgeInsets.only(bottom: 100.0),
                                     child: SizedBox(
                                       height: 110,
                                       width: 105,
@@ -1120,37 +1119,21 @@ actions: [
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(left: 25.0),
+                  padding: const EdgeInsets.only(left: 14, bottom: 8),
                   child: Row(
-                    children: <Widget>[
-                      Container(
-                        margin: const EdgeInsets.all(8),
-                        height: 40,
-                        width: 180,
-                        child: const Text(
-                          "Must try visit",
-                          style:
-                              TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
-                          maxLines: 1,
-                        ),
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: const [
+                      Text(
+                        'Must try visit ',
+                        style: TextStyle(
+                            fontSize: 15, fontWeight: FontWeight.bold),
                       ),
-                      const SizedBox(
-                        width: 120,
-                      ),
-                      const Padding(
-                        padding: EdgeInsets.all(8.0),
-                        child: SizedBox(
-                          //color: Colors.white,
-                          height: 30,
-                          width: 50,
-                          //color: Colors.white,
-                          child: Text(
-                            "View All",
-                            style: TextStyle(
-                                color: Colors.orange, fontWeight: FontWeight.bold),
-                            maxLines: 1,
-                          ),
-                        ),
+                      Text(
+                        'View all',
+                        style: TextStyle(
+                            fontSize: 15,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.orange),
                       )
                     ],
                   ),
@@ -1163,7 +1146,7 @@ actions: [
                       Column(
                         children: [
                           Padding(
-                            padding: const EdgeInsets.only(left: 25.0),
+                            padding: const EdgeInsets.only(left: 17.0),
                             child: Container(
                               height: 170,
                               width: 220,
@@ -1184,7 +1167,8 @@ actions: [
                                 child: Text(
                                   "Cafe Vita",
                                   style: TextStyle(
-                                      fontSize: 15, fontWeight: FontWeight.bold),
+                                      fontSize: 15,
+                                      fontWeight: FontWeight.bold),
                                   maxLines: 1,
                                 ),
                               ),
@@ -1208,6 +1192,8 @@ actions: [
                                       ),
                                     ),
                                     Text("5.0"),
+                                    Text("  "),
+                                    Text("35 min"),
                                   ],
                                 ),
                               ),
@@ -1282,7 +1268,8 @@ actions: [
                                 child: Text(
                                   "Cafe Vita",
                                   style: TextStyle(
-                                      fontSize: 15, fontWeight: FontWeight.bold),
+                                      fontSize: 15,
+                                      fontWeight: FontWeight.bold),
                                   maxLines: 1,
                                 ),
                               ),
@@ -1306,6 +1293,8 @@ actions: [
                                       ),
                                     ),
                                     Text("5.0"),
+                                    Text("  "),
+                                    Text("35 min"),
                                   ],
                                 ),
                               ),
@@ -1320,9 +1309,9 @@ actions: [
                                     ),
                                     child: const Center(
                                         child: Text(
-                                          "6:45 PM",
-                                          maxLines: 1,
-                                        )),
+                                      "6:45 PM",
+                                      maxLines: 1,
+                                    )),
                                   ),
                                   Container(
                                     height: 20,
@@ -1333,9 +1322,9 @@ actions: [
                                     ),
                                     child: const Center(
                                         child: Text(
-                                          "7:00 PM",
-                                          maxLines: 1,
-                                        )),
+                                      "7:00 PM",
+                                      maxLines: 1,
+                                    )),
                                   ),
                                   Container(
                                     height: 20,
@@ -1346,9 +1335,9 @@ actions: [
                                     ),
                                     child: const Center(
                                         child: Text(
-                                          "7:45 PM",
-                                          maxLines: 1,
-                                        )),
+                                      "7:45 PM",
+                                      maxLines: 1,
+                                    )),
                                   )
                                 ],
                               ),
