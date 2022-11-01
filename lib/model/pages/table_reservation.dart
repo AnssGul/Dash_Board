@@ -61,7 +61,7 @@ class _TableReservationState extends State<TableReservation> {
                             fontSize: 15,
 // fontWeight: FontWeight.bold
                             color: Colors.black),
-                        maxLines:2,
+                        maxLines:4,
                       ),
                     ],
                   ),
@@ -101,6 +101,7 @@ class _TableReservationState extends State<TableReservation> {
             ),
           ),
           Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               Padding(
                 padding: const EdgeInsets.only(left: 17,right: 8,top: 7,bottom: 8),
