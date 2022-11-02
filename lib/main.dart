@@ -11,10 +11,11 @@ import 'package:dash_board/widgets/container_Tr.dart';
 import 'package:flutter/material.dart';
 
 import 'model/pages/DashBoard.dart';
+import 'model/pages/TableReservation/table_reservation.dart';
 import 'model/pages/table_reservation.dart';
 
 void main() => runApp(
     const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home:ResturentScreen(),
+      home:TableReservationSecond(),
     ));
