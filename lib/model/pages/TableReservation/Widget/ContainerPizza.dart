@@ -37,22 +37,22 @@ class _ContainerPizzaInfoState extends State<ContainerPizzaInfo> {
                       ],
                     ),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.only(top: 20),
-                    child: Row(
-                      children: const [
-                        Icon(
-                          Icons.search,
-                          color: Colors.black,
-                          size: 35,
-                        ),
-                        Text(
-                          "Search",
-                          style: TextStyle(fontSize: 18),
-                        )
-                      ],
-                    ),
-                  )
+                  // Padding(
+                  //   padding: const EdgeInsets.only(top: 20),
+                  //   child: Row(
+                  //     children: const [
+                  //       Icon(
+                  //         Icons.search,
+                  //         color: Colors.black,
+                  //         size: 35,
+                  //       ),
+                  //       Text(
+                  //         "Search",
+                  //         style: TextStyle(fontSize: 18),
+                  //       )
+                  //     ],
+                  //   ),
+                  // )
                 ],
               ),
             ),
@@ -124,6 +124,22 @@ class _ContainerPizzaInfoState extends State<ContainerPizzaInfo> {
                                 ),
                                 Text(
                                   "4.5 (100+ ratings)",
+                                  style: TextStyle(
+                                      fontSize: 15,
+// fontWeight: FontWeight.bold
+                                      color: Colors.black),
+                                  maxLines: 1,
+                                ),
+                                Text(
+                                  " * ",
+                                  style: TextStyle(
+                                      fontSize: 15,
+// fontWeight: FontWeight.bold
+                                      color: Colors.black),
+                                  maxLines: 1,
+                                ),
+                                Text(
+                                  "\$300 for two",
                                   style: TextStyle(
                                       fontSize: 15,
 // fontWeight: FontWeight.bold

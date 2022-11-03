@@ -340,186 +340,184 @@ class _ResturentScreenState extends State<ResturentScreen> {
         const SizedBox(
           height: 15,
         ),
-        Flexible(
-          child: ListView.builder(
-              shrinkWrap: true,
-              itemCount: 5,
-              scrollDirection: Axis.vertical,
-              //physics: NeverScrollableScrollPhysics(),
-              itemBuilder: (BuildContext context, int index) {
-                return Padding(
-                  padding: const EdgeInsets.fromLTRB(8, 8, 8, 8),
-                  child: Stack(
-                    children: [
-                      Positioned(
-                          child: Material(
+        ListView.builder(
+         //o   shrinkWrap: true,
+            itemCount: 5,
+            scrollDirection: Axis.vertical,
+            //physics: NeverScrollableScrollPhysics(),
+            itemBuilder: (BuildContext context, int index) {
+              return Padding(
+                padding: const EdgeInsets.all(8),
+                child: Stack(
+                  children: [
+                    Positioned(
+                        child: Material(
+                      child: Container(
+                        height: 140,
+                        width: MediaQuery.of(context).size.width,
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(30),
+                        ),
+                      ),
+                    )),
+                    Positioned(
+                      top: 0,
+                      left: 20,
+                      child: Card(
+                        shadowColor: Colors.pink,
                         child: Container(
-                          height: 140,
-                          width: MediaQuery.of(context).size.width,
+                          height: 130,
+                          width: 110,
+                          // color: Colors.pink,
                           decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(30),
+                            color: Colors.pink,
+                            borderRadius: BorderRadius.circular(18),
+                          //image: DecorationImage(
+                            // image: Image.asset("images/img_8.png"),
+                            //fit: BoxFit.fitWidth,
+                            //  alignment: Alignment.topCenter,
+                            //  ),
                           ),
+                          child: Image.asset(
+                            "images/img_18.png",
+                            fit: BoxFit.cover,
+                          ),
+                          // child: Text("YOUR TEXT"),
                         ),
-                      )),
-                      Positioned(
-                        top: 0,
-                        left: 20,
-                        child: Card(
-                          shadowColor: Colors.pink,
-                          child: Container(
-                            height: 130,
-                            width: 110,
-                            // color: Colors.pink,
+                      ),
+
+                      ///child:Container(
+
+                       //)
+                    ),
+                    Positioned(
+                        top: 10,
+                        left: 25,
+                        child: Container(
+                            height: 32,
+                            width: 30,
                             decoration: BoxDecoration(
-                              color: Colors.pink,
-                              borderRadius: BorderRadius.circular(18),
-                            //image: DecorationImage(
-                              // image: Image.asset("images/img_8.png"),
-                              //fit: BoxFit.fitWidth,
-                              //  alignment: Alignment.topCenter,
-                              //  ),
-                            ),
-                            child: Image.asset(
-                              "images/img_18.png",
-                              fit: BoxFit.cover,
-                            ),
-                            // child: Text("YOUR TEXT"),
-                          ),
-                        ),
-
-                        ///child:Container(
-
-                         //)
-                      ),
-                      Positioned(
-                          top: 10,
-                          left: 25,
-                          child: Container(
-                              height: 32,
-                              width: 30,
-                              decoration: BoxDecoration(
-                                  color: Colors.white70,
-                                  borderRadius: BorderRadius.circular(13),
-                                  border: Border.all(
+                                color: Colors.white70,
+                                borderRadius: BorderRadius.circular(13),
+                                border: Border.all(
+                                  color: Colors.green,
+                                )),
+                            child: Positioned(
+                              child: Container(
+                                height: 13,
+                                width: 10,
+                                decoration: BoxDecoration(
                                     color: Colors.green,
-                                  )),
-                              child: Positioned(
-                                child: Container(
-                                  height: 13,
-                                  width: 10,
-                                  decoration: BoxDecoration(
-                                      color: Colors.green,
-                                      border: Border.all(color: Colors.white),
-                                      borderRadius: BorderRadius.circular(12)),
-                                ),
-                              ))),
-                      Positioned(
-                        top: 13,
-                        right: 13,
-                        // /left: 290,
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: const [
-                            Padding(
-                              padding: EdgeInsets.only(left: 8),
-                              child: Icon(
-                                Icons.star,
-                                color: Colors.green,
+                                    border: Border.all(color: Colors.white),
+                                    borderRadius: BorderRadius.circular(12)),
                               ),
+                            ))),
+                    Positioned(
+                      top: 13,
+                      right: 13,
+                      // /left: 290,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: const [
+                          Padding(
+                            padding: EdgeInsets.only(left: 8),
+                            child: Icon(
+                              Icons.star,
+                              color: Colors.green,
                             ),
-                            Text(
-                              "5.0",
-                              style: TextStyle(fontWeight: FontWeight.bold),
-                            ),
-                          ],
-                        ),
+                          ),
+                          Text(
+                            "5.0",
+                            style: TextStyle(fontWeight: FontWeight.bold),
+                          ),
+                        ],
                       ),
-                      Positioned(
-                          top: 20,
-                          left: 100,
-                          child: Column(
-                            children: [
-                              const Text(
-                                "Margherita Pizza",
+                    ),
+                    Positioned(
+                        top: 20,
+                        left: 100,
+                        child: Column(
+                          children: [
+                            const Text(
+                              "Margherita Pizza",
+                              style: TextStyle(
+                                  color: Colors.black, fontSize: 20),
+                            ),
+                            const Padding(
+                              padding: EdgeInsets.only(top: 6, right: 110),
+                              child: Text(
+                                "\$800 ",
                                 style: TextStyle(
-                                    color: Colors.black, fontSize: 20),
-                              ),
-                              const Padding(
-                                padding: EdgeInsets.only(top: 6, right: 110),
-                                child: Text(
-                                  "\$800 ",
-                                  style: TextStyle(
-                                      color: Colors.pink,
-                                      fontSize: 13,
-                                      fontWeight: FontWeight.bold),
-                                  maxLines: 2,
-                                ),
-                              ),
-                              const Padding(
-                                padding: EdgeInsets.only(top: 6, left: 63),
-                                child: Text(
-                                  "2 McAloo Tikki Burgers + 2 Fries(L)",
-                                  style: TextStyle(
-                                      color: Colors.black54,
-                                      fontSize: 13,
-                                      fontWeight: FontWeight.bold),
-                                  maxLines: 2,
-                                ),
-                              ),
-                              Padding(
-                                padding:
-                                    const EdgeInsets.only(right: 80, top: 16),
-                                child: Row(
-// mainAxisAlignment: MainAxisAlignment.start,
-                                  children: [
-                                    Container(
-                                      height: 30,
-                                      width: 60,
-                                      decoration: BoxDecoration(
-//color: Colors.yellow[100],
-                                          border: Border.all(
-                                            color: Colors.orange,
-                                            width: 1,
-                                          ),
-                                          borderRadius:
-                                              BorderRadius.circular(10)),
-                                      child: const Center(
-                                        child: Text(
-                                          'Add',
-                                          style: TextStyle(
-                                              color: Colors.orange,
-                                              fontSize: 13,
-                                              fontWeight: FontWeight.bold),
-                                        ),
-                                      ),
-                                    )
-                                  ],
-                                ),
-                              ),
-                            ],
-                          )),
-                      Positioned(
-                        top: 0,
-                        left: 80,
-                        child: Row(
-                          children: const [
-                            Padding(
-                              padding: EdgeInsets.only(left: 8),
-                              child: Icon(
-                                Icons.star,
-                                color: Colors.green,
+                                    color: Colors.pink,
+                                    fontSize: 13,
+                                    fontWeight: FontWeight.bold),
+                                maxLines: 2,
                               ),
                             ),
-                            Text("5.0"),
+                            const Padding(
+                              padding: EdgeInsets.only(top: 6, left: 63),
+                              child: Text(
+                                "2 McAloo Tikki Burgers + 2 Fries(L)",
+                                style: TextStyle(
+                                    color: Colors.black54,
+                                    fontSize: 13,
+                                    fontWeight: FontWeight.bold),
+                                maxLines: 2,
+                              ),
+                            ),
+                            Padding(
+                              padding:
+                                  const EdgeInsets.only(right: 80, top: 16),
+                              child: Row(
+// mainAxisAlignment: MainAxisAlignment.start,
+                                children: [
+                                  Container(
+                                    height: 30,
+                                    width: 60,
+                                    decoration: BoxDecoration(
+//color: Colors.yellow[100],
+                                        border: Border.all(
+                                          color: Colors.orange,
+                                          width: 1,
+                                        ),
+                                        borderRadius:
+                                            BorderRadius.circular(10)),
+                                    child: const Center(
+                                      child: Text(
+                                        'Add',
+                                        style: TextStyle(
+                                            color: Colors.orange,
+                                            fontSize: 13,
+                                            fontWeight: FontWeight.bold),
+                                      ),
+                                    ),
+                                  )
+                                ],
+                              ),
+                            ),
                           ],
-                        ),
-                      )
-                    ],
-                  ),
-                );
-              }),
-        ),
+                        )),
+                    Positioned(
+                      top: 0,
+                      left: 80,
+                      child: Row(
+                        children: const [
+                          Padding(
+                            padding: EdgeInsets.only(left: 8),
+                            child: Icon(
+                              Icons.star,
+                              color: Colors.green,
+                            ),
+                          ),
+                          Text("5.0"),
+                        ],
+                      ),
+                    )
+                  ],
+                ),
+              );
+            }),
         Padding(
           padding: const EdgeInsets.all(8.0),
           child: Stack(
