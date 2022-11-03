@@ -21,38 +21,19 @@ class _ContainerPizzaInfoState extends State<ContainerPizzaInfo> {
         child: Column(
           children: [
             Padding(
-              padding: const EdgeInsets.only(top: 24, left: 8),
+              padding: const EdgeInsets.all(8.0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Padding(
-                    padding: const EdgeInsets.only(top: 20, left: 8),
-                    child: Row(
-                      children: const [
-                        Icon(
-                          Icons.arrow_back,
-                          color: Colors.black,
-                          size: 35,
-                        ),
-                      ],
-                    ),
+                  Icon(
+                    Icons.arrow_back,
+                    color: Colors.black,
+                    size: 35,
                   ),
-                  // Padding(
-                  //   padding: const EdgeInsets.only(top: 20),
-                  //   child: Row(
-                  //     children: const [
-                  //       Icon(
-                  //         Icons.search,
-                  //         color: Colors.black,
-                  //         size: 35,
-                  //       ),
-                  //       Text(
-                  //         "Search",
-                  //         style: TextStyle(fontSize: 18),
-                  //       )
-                  //     ],
-                  //   ),
-                  // )
+                  Text("Table Reservation",
+                      style:
+                      TextStyle(fontSize: 25, fontWeight: FontWeight.bold)),
+                  Container(child: Text(""),)
                 ],
               ),
             ),
