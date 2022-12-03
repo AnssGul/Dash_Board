@@ -21,6 +21,7 @@ class _AnotherContainerInfoState extends State<AnotherContainerInfo> {
         ),
         child: Column(
           children: [
+
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [

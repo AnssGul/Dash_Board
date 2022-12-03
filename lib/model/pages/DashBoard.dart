@@ -11,6 +11,7 @@ class FirstPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.orangeAccent,
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
         children: <Widget>[
           // Row(children:<Widget> [
 
