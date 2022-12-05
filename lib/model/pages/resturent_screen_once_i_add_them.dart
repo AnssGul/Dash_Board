@@ -92,7 +92,7 @@ class _ResturentScreenState extends State<ResturentScreen> {
                                         borderRadius:
                                             BorderRadius.circular(20.0)),
 //  color: Colors.red,
-                                    child: Icon(Icons.local_pizza_outlined,color: Colors.white,)
+                                    child: const Icon(Icons.local_pizza_outlined,color: Colors.white,)
                                   ),
                                 ),
                               ],
@@ -419,15 +419,18 @@ class _ResturentScreenState extends State<ResturentScreen> {
                       // /left: 290,
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.start,
-                        children: const [
-                          Padding(
-                            padding: EdgeInsets.only(left: 8),
-                            child: Icon(
-                              Icons.star,
-                              color: Colors.green,
-                            ),
+                        children: [
+                          Container(
+                              width: 22,
+                              height: 22,
+                              decoration: BoxDecoration(
+                                  color: Colors.green,
+                                  borderRadius:
+                                  BorderRadius.circular(20.0)),
+
+                              child: const Icon(Icons.star,color: Colors.white,size: 14,)
                           ),
-                          Text(
+                          const Text(
                             "5.0",
                             style: TextStyle(fontWeight: FontWeight.bold),
                           ),
@@ -498,22 +501,7 @@ class _ResturentScreenState extends State<ResturentScreen> {
                             ),
                           ],
                         )),
-                    Positioned(
-                      top: 0,
-                      left: 80,
-                      child: Row(
-                        children: const [
-                          Padding(
-                            padding: EdgeInsets.only(left: 8),
-                            child: Icon(
-                              Icons.star,
-                              color: Colors.green,
-                            ),
-                          ),
-                          Text("5.0"),
-                        ],
-                      ),
-                    )
+
                   ],
                 ),
               );
