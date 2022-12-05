@@ -1,6 +1,7 @@
 //import 'package:dash_board/model/pages/DashBoard.dart';
 //import 'package:dash_board/model/pages/Loginpage.dart';
 //import 'package:dash_board/model/pages/SignUp.dart';
+import 'package:dash_board/model/pages/add_detail/add_detail.dart';
 import 'package:dash_board/model/pages/allergy_information.dart';
 import 'package:dash_board/model/pages/home-For_orders.dart';
 import 'package:dash_board/model/pages/home.dart';
@@ -19,5 +20,5 @@ import 'model/pages/table_reservation.dart';
 void main() => runApp(
     const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home:RestaurantProfileView(),
+      home:AddDetail(),
     ));
