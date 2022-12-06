@@ -86,39 +86,45 @@ class _ItemsDetailState extends State<ItemsDetail> {
          ),
 
 
-               Row(
-                 children: [
-                   Column(
-                     children: [
-    Container(
-           height: 25,
-             width: 70,
-            // color: Colors.white,
-    decoration: BoxDecoration(
-               borderRadius: BorderRadius.circular(10),
-               color: Colors.white,
-               border: Border.all(color: Colors.grey)
-             ),
-             child: Row(
-               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-               children: [
-                 Text("-",style: TextStyle(color: Colors.orange,fontWeight: FontWeight.bold,fontSize: 16),),
-                 Text("1",style: TextStyle(color: Colors.orange,fontWeight: FontWeight.bold,fontSize: 16),),
-                 Text("+",style: TextStyle(color: Colors.orange,fontWeight: FontWeight.bold,fontSize: 16),),
-               ],
-             ),
+               Padding(
+                 padding: const EdgeInsets.all(8.0),
+                 child: Row(
+                   children: [
+                     Column(
+                       children: [
+    Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Container(
+             height: 25,
+               width: 70,
+              // color: Colors.white,
+      decoration: BoxDecoration(
+                   borderRadius: BorderRadius.circular(10),
+                   color: Colors.white,
+                   border: Border.all(color: Colors.grey)
+               ),
+               child: Row(
+                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                   children: [
+                     Text("-",style: TextStyle(color: Colors.orange,fontWeight: FontWeight.bold,fontSize: 16),),
+                     Text("1",style: TextStyle(color: Colors.orange,fontWeight: FontWeight.bold,fontSize: 16),),
+                     Text("+",style: TextStyle(color: Colors.orange,fontWeight: FontWeight.bold,fontSize: 16),),
+                   ],
+               ),
+      ),
     ),
 
     Text(
            "\$350.12",
              style: TextStyle(color: Colors.black,
-                 fontWeight: FontWeight.bold,
-                 fontSize: 15
+                   fontWeight: FontWeight.bold,
+                   fontSize: 15
              ),
            ),
-                     ],
-                   )
-                 ],
+                       ],
+                     )
+                   ],
+                 ),
                )
 
              ],
