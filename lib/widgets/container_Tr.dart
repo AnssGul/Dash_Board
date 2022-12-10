@@ -25,7 +25,7 @@ class _ContainerReservationState extends State<ContainerReservation> {
                 padding: const EdgeInsets.all(8.0),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
+                  children: const [
                     Icon(
                       Icons.arrow_back,
                       color: Colors.black,
@@ -34,7 +34,7 @@ class _ContainerReservationState extends State<ContainerReservation> {
                     Text("Recipe Details",
                         style:
                             TextStyle(fontSize: 25, fontWeight: FontWeight.bold)),
-                    Container(child: Text(""),)
+                    Text("")
                   ],
                 ),
               ),

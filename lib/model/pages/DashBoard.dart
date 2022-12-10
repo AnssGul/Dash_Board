@@ -72,7 +72,7 @@ class FirstPage extends StatelessWidget {
           Container(
               alignment: Alignment.center,
               child: TextButton(
-                child: Text(
+                child: const Text(
                   "Dash",
                   style: TextStyle(
                       fontSize: 50,

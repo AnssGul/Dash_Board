@@ -19,10 +19,10 @@ class _AddGuestOnTableState extends State<AddGuestOnTable> {
         children: [
           Column(
             mainAxisAlignment: MainAxisAlignment.start,
-            children: [
+            children: const [
               AppBBar(),
               Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding: EdgeInsets.all(8.0),
                 child: MyCard(),
               ),
               SaveButton()

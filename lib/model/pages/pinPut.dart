@@ -106,12 +106,12 @@ class _PinputExampleState extends State<PinputExample> {
 
           Padding(
             padding: const EdgeInsets.only(top: 40.0),
-            child: Container(
+            child: SizedBox(
               width: MediaQuery.of(context).size.width * 1.6,
               child: ElevatedButton(
                 onPressed: () {},
                 style: ElevatedButton.styleFrom(
-                  primary: Colors.orangeAccent,
+                  backgroundColor: Colors.orangeAccent,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(12),
                   ),

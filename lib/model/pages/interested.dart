@@ -269,7 +269,7 @@ class _InterestedThingState extends State<InterestedThing> {
                               ));
                         },
                         style: ElevatedButton.styleFrom(
-                          primary: Colors.orangeAccent,
+                          backgroundColor: Colors.orangeAccent,
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(12),
                           ),

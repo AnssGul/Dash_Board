@@ -27,7 +27,7 @@ class _ContainerTimeState extends State<ContainerTime> {
                       color: Colors.grey
                   )
               ),
-                child: Center(
+                child: const Center(
                   child: Text("12:00",style: TextStyle(color: Colors.grey,
                   fontSize: 15
                   ),),
@@ -46,7 +46,7 @@ class _ContainerTimeState extends State<ContainerTime> {
                           color: Colors.orange
                       )
                   ),
-                  child: Center(
+                  child: const Center(
                     child: Text("1:00",style: TextStyle(color: Colors.orange,
                         fontSize: 15
                     ),),
@@ -65,7 +65,7 @@ class _ContainerTimeState extends State<ContainerTime> {
                           color: Colors.grey
                       )
                   ),
-                  child: Center(
+                  child: const Center(
                     child: Text("1:30",style: TextStyle(color: Colors.grey,
                         fontSize: 15
                     ),),
@@ -84,7 +84,7 @@ class _ContainerTimeState extends State<ContainerTime> {
                           color: Colors.orange
                       )
                   ),
-                  child: Center(
+                  child: const Center(
                     child: Text("3:00",style: TextStyle(color: Colors.orange,
                         fontSize: 15
                     ),),
@@ -108,7 +108,7 @@ class _ContainerTimeState extends State<ContainerTime> {
                           color: Colors.orange
                       )
                   ),
-                  child: Center(
+                  child: const Center(
                     child: Text("4:00",style: TextStyle(color: Colors.orange,
                         fontSize: 15
                     ),),
@@ -127,7 +127,7 @@ class _ContainerTimeState extends State<ContainerTime> {
                           color: Colors.orange
                       )
                   ),
-                  child: Center(
+                  child: const Center(
                     child: Text("4:30",style: TextStyle(color: Colors.orange,
                         fontSize: 15
                     ),),
@@ -146,7 +146,7 @@ class _ContainerTimeState extends State<ContainerTime> {
                           color: Colors.grey
                       )
                   ),
-                  child: Center(
+                  child: const Center(
                     child: Text("5:00",style: TextStyle(color: Colors.grey,
                         fontSize: 15
                     ),),
@@ -165,7 +165,7 @@ class _ContainerTimeState extends State<ContainerTime> {
                           color: Colors.orange
                       )
                   ),
-                  child: Center(
+                  child: const Center(
                     child: Text("5:30",style: TextStyle(color: Colors.orange,
                         fontSize: 15
                     ),),

@@ -22,7 +22,7 @@ class _TableReservationSecondState extends State<TableReservationSecond> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              ContainerPizzaInfo(),
+              const ContainerPizzaInfo(),
               Padding(
                 padding: const EdgeInsets.only(left: 8,top: 40,right: 8),
                 child: Row(
@@ -52,8 +52,8 @@ class _TableReservationSecondState extends State<TableReservationSecond> {
                   ],
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
+              const Padding(
+                padding: EdgeInsets.all(8.0),
                 child: DaydateContainer(),
               ),
 
@@ -86,7 +86,7 @@ class _TableReservationSecondState extends State<TableReservationSecond> {
                   ],
                 ),
               ),
-              ContainerTime(),
+              const ContainerTime(),
               Padding(
                 padding: const EdgeInsets.only(left: 8,top: 66.75),
                 child: Row(
@@ -116,9 +116,9 @@ class _TableReservationSecondState extends State<TableReservationSecond> {
                   ],
                 ),
               ),
-              GuestContainer(),
-      CircleAvatarr(),
-              ButtonInfo()
+              const GuestContainer(),
+      const CircleAvatarr(),
+              const ButtonInfo()
             ],
           ),
         )

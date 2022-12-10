@@ -25,15 +25,15 @@ class _ContainerPizzaInfoState extends State<ContainerPizzaInfo> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Icon(
+                  const Icon(
                     Icons.arrow_back,
                     color: Colors.black,
                     size: 35,
                   ),
-                  Text("Table Reservation",
+                  const Text("Table Reservation",
                       style:
                       TextStyle(fontSize: 25, fontWeight: FontWeight.bold)),
-                  Container(child: Text(""),)
+                  Container(child: const Text(""),)
                 ],
               ),
             ),
@@ -71,7 +71,7 @@ class _ContainerPizzaInfoState extends State<ContainerPizzaInfo> {
                                         borderRadius:
                                         BorderRadius.circular(20.0)),
 //  color: Colors.red,
-                                    child: Icon(Icons.local_pizza_outlined,color: Colors.white,)
+                                    child: const Icon(Icons.local_pizza_outlined,color: Colors.white,)
                                 ),
                               ),
                             ],

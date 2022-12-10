@@ -17,7 +17,7 @@ class AppBBar extends StatelessWidget {
           const Text("My Contacts",
               style:
               TextStyle(fontSize: 25, fontWeight: FontWeight.bold)),
-          Container(child: const Text(""),)
+          const Text("")
         ],
       ),
     );

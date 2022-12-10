@@ -25,6 +25,6 @@ class _SaveButtonState extends State<SaveButton> {
               fontWeight: FontWeight.bold,fontSize: 18),
         ),
       ),
-    );;
+    );
   }
 }

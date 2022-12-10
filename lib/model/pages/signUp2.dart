@@ -145,7 +145,7 @@ class _SignUP2State extends State<SignUP2> {
                             ),
                             Padding(
                               padding: const EdgeInsets.only(top: 40.0),
-                              child: Container(
+                              child: SizedBox(
                                 width: MediaQuery.of(context).size.width * 1.6,
                                 child: ElevatedButton(
                                   onPressed: () {

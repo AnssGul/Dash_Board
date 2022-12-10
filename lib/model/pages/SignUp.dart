@@ -29,7 +29,7 @@ class _signUPState extends State<signUP> {
                 ),
               ),
             ),
-            SizedBox(height: 70),
+            const SizedBox(height: 70),
             Padding(
               padding: const EdgeInsets.only(top: 90.0),
               child: Stack(children: <Widget>[

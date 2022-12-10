@@ -174,8 +174,8 @@ class _AllergyInformationState extends State<AllergyInformation> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
                   //Container(
-                  Expanded(
-                    child: const Padding(
+                  const Expanded(
+                    child: Padding(
                       padding: EdgeInsets.fromLTRB(8.0, 0, 8, 150),
                       child: CircleAvatar(
                         radius: 70,
@@ -216,8 +216,8 @@ class _AllergyInformationState extends State<AllergyInformation> {
                     ],
                   ),
                   //),
-                  Expanded(
-                    child: const Padding(
+                  const Expanded(
+                    child: Padding(
                       padding: EdgeInsets.fromLTRB(8, 0, 8, 200),
                       child: CircleAvatar(
                         radius: 60,
@@ -267,7 +267,7 @@ class _AllergyInformationState extends State<AllergyInformation> {
                           //builder: (context) =>  SignUP3(number:myController.text),
                         },
                         style: ElevatedButton.styleFrom(
-                          primary: Colors.orangeAccent,
+                          backgroundColor: Colors.orangeAccent,
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(12),
                           ),
