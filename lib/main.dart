@@ -4,6 +4,7 @@
 import 'package:dash_board/model/pages/Splitting_bill/splitting_bill.dart';
 import 'package:dash_board/model/pages/add_detail/add_detail.dart';
 import 'package:dash_board/model/pages/allergy_information.dart';
+import 'package:dash_board/model/pages/booking_information_status/booking_information_status.dart';
 import 'package:dash_board/model/pages/home-For_orders.dart';
 import 'package:dash_board/model/pages/home.dart';
 import 'package:dash_board/model/pages/interested.dart';
@@ -22,5 +23,5 @@ import 'model/pages/table_reservation.dart';
 void main() => runApp(
     const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home:SplittingBill(),
+      home:BookingInformationStatus(),
     ));

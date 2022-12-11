@@ -65,7 +65,7 @@ class _SplittingBillState extends State<SplittingBill> {
                      TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
                ),
                const SliderCode(),
-               BilSplittingButton()
+               const BilSplittingButton()
              ],
            ),
          ],

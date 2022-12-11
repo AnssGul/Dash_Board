@@ -34,7 +34,7 @@ crossAxisAlignment: CrossAxisAlignment.start,
               Expanded(
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
+                  children: const [
                      Text("Me & Robert",
                       style: TextStyle(
                         fontSize: 18,

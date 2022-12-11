@@ -45,6 +45,7 @@ dependencies:
   google_maps_flutter: ^2.2.1
   flutter_polyline_points: ^1.0.0
   geolocator: ^9.0.2
+  fdottedline_nullsafety: ^2.0.1
 
 
 dev_dependencies:
@@ -103,6 +104,8 @@ flutter:
       - images/img_38.png
       - images/img_39.png
       - images/img_40.png
+      - images/img_41.png
+      - images/img_42.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
