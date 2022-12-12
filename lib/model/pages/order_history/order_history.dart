@@ -19,7 +19,7 @@ class _OrderHistoryState extends State<OrderHistory> {
             padding: const EdgeInsets.only(top: 20.0),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
+              children: const [
                 Icon(Icons.arrow_back),
                 Text("Order History",style: TextStyle(
                   fontSize: 22,
@@ -36,34 +36,28 @@ class _OrderHistoryState extends State<OrderHistory> {
               initialIndex: 0,
               child: Column(crossAxisAlignment: CrossAxisAlignment.stretch,
                children: <Widget>[
-                Container(
-                  child: TabBar(
-                    labelColor: Colors.orange,
-                    unselectedLabelColor: Colors.orange,
-                    tabs: [
-                      Tab(text: 'Table Reservation'),
-                      Tab(text: 'Pickup Order '),
-                   //   Tab(text: 'Tab 3'),
-                     // Tab(text: 'Tab 4'),
-                    ],
-                  ),
+                const TabBar(
+                  labelColor: Colors.orange,
+                  unselectedLabelColor: Colors.orange,
+                  tabs: [
+                    Tab(text: 'Table Reservation'),
+                    Tab(text: 'Pickup Order '),
+                 //   Tab(text: 'Tab 3'),
+                   // Tab(text: 'Tab 4'),
+                  ],
                 ),
                 Container(
                     height: 400, //height of TabBarView
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                         border: Border(top: BorderSide(color: Colors.grey, width: 0.5))
                     ),
-                    child: TabBarView(children: <Widget>[
-                      Container(
-                        child: Center(
-                          child:CardsOrderHistory()
-                          ),
+                    child: const TabBarView(children: <Widget>[
+                      Center(
+                        child:CardsOrderHistory()
                         ),
 
-                      Container(
-                        child: Center(
-                          child: OrderHistoryTakeout()
-                        ),
+                      Center(
+                        child: OrderHistoryTakeout()
                       ),
 
 
@@ -71,6 +65,9 @@ class _OrderHistoryState extends State<OrderHistory> {
           )
         ],
       ),
-          )]));
+          )
+        ]
+      )
+    );
   }
 }
