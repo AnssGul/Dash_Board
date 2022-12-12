@@ -14,7 +14,7 @@ class _TableReservedState extends State<TableReserved> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
        const Padding(
-         padding: EdgeInsets.only(left: 30.0),
+         padding: EdgeInsets.only(left: 8.0),
          child: SizedBox(
            height: 80,
            width: 239,
@@ -32,7 +32,7 @@ class _TableReservedState extends State<TableReserved> {
 Stack(
   children: [
 Padding(
-  padding: const EdgeInsets.all(15.0),
+  padding: const EdgeInsets.all(8.0),
   child:   Container(
 
     height: 450,

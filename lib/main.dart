@@ -8,6 +8,7 @@ import 'package:dash_board/model/pages/booking_information_status/booking_inform
 import 'package:dash_board/model/pages/home-For_orders.dart';
 import 'package:dash_board/model/pages/home.dart';
 import 'package:dash_board/model/pages/interested.dart';
+import 'package:dash_board/model/pages/order_history/order_history.dart';
 import 'package:dash_board/model/pages/resturant_profile_view/restaurant_profile_view.dart';
 import 'package:dash_board/model/pages/resturent_screen_once_i_add_them.dart';
 import 'package:dash_board/model/pages/split_order/split_order.dart';
@@ -23,5 +24,5 @@ import 'model/pages/table_reservation.dart';
 void main() => runApp(
     const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home:BookingInformationStatus(),
+      home:OrderHistory(),
     ));

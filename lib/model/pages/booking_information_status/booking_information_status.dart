@@ -20,15 +20,18 @@ Padding(
   padding: const EdgeInsets.only(top: 22.0),
   child:   Row(
 
-    mainAxisAlignment: MainAxisAlignment.spaceAround,
+    mainAxisAlignment: MainAxisAlignment.spaceBetween,
 
     children: const [
 
-      Text("Cancel",style: TextStyle(
-        color: Color.fromRGBO(255, 255, 255, 0.8),
-        fontSize: 14,
+      Padding(
+        padding: EdgeInsets.only(left: 8.0),
+        child: Text("Cancel",style: TextStyle(
+          color: Color.fromRGBO(255, 255, 255, 0.8),
+          fontSize: 14,
 
-      ),),
+        ),),
+      ),
 
       Text("Booking Status",style: TextStyle(
         color: Color.fromRGBO(255, 255, 255, 1),
@@ -48,14 +51,14 @@ Padding(
     children: [
 
       Padding(
-        padding: const EdgeInsets.only(left: 28.0,),
+        padding: const EdgeInsets.only(left: 8.0,),
         child: Image.asset("images/img_41.png",
         height: 30.75,
           width: 33.75,
         ),
       ),
       const Positioned(
-left: 34,
+left: 13,
           top: 4,
           child:Icon(Icons.check,color: Colors.white,)
 
